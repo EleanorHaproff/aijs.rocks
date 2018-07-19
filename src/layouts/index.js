@@ -1,12 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Typography from 'typography'
 
 import Header from '../components/header'
+import Sidebar from '../components/sidebar'
 import './index.css'
+
+// Customize Typography Plugin
+const typography = new Typography({
+  baseFontSize: '12px',
+  baseLineHeight: 1.666,
+  headerFontFamily: ['Space Mono'],
+
+})
+typography.toString()
+typography.injectStyles()
 
 const Layout = ({ children, data }) => (
   <div>
+    <Sidebar  />
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -14,7 +27,6 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
     <div
       style={{
         margin: '0 auto',
@@ -25,6 +37,7 @@ const Layout = ({ children, data }) => (
     >
       {children()}
     </div>
+    <Header  />
   </div>
 )
 
