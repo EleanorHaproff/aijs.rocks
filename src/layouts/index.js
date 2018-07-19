@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Typography from 'typography'
+import styled from 'styled-components';
 
 import Header from '../components/header'
 import Sidebar from '../components/sidebar'
@@ -17,8 +18,12 @@ const typography = new Typography({
 typography.toString()
 typography.injectStyles()
 
+const AppWrapper = styled.div`
+  display:flex;
+  
+`
 const Layout = ({ children, data }) => (
-  <div>
+  <AppWrapper>
     <Sidebar  />
     <Helmet
       title={data.site.siteMetadata.title}
@@ -38,7 +43,7 @@ const Layout = ({ children, data }) => (
       {children()}
     </div>
     <Header  />
-  </div>
+  </AppWrapper>
 )
 
 Layout.propTypes = {

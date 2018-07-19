@@ -7,9 +7,6 @@ const HeaderWrapper = styled.div`
   background:#232537;
   max-width:140px;
   height:100vh;
-  position:fixed;
-  top:0;
-  right:0;
   padding:40px;
   display:flex;
   flex-direction:column;
