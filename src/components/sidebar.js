@@ -34,9 +34,11 @@ const TagsWrapper = styled.ul`
 const FooterWrapper = styled.div`
   position: relative;
   :hover p{
-    display:block;
+    visibility: visiable;
+    opacity:1;
   }
   p{
+    opacity:0;
     position: absolute;
     top: 8px;
     left: 40px;
@@ -46,11 +48,21 @@ const FooterWrapper = styled.div`
     border-radius: 4px;
     font-size: 10px;
     padding: 2px 0;
-    display:none;
+    visibility: none;
+    opacity:0;
+    transition: all .3s ease-in;
+    :hover{
+      visibility: visiable;
+      opacity:1;
+    }
+  }
+  a{
+    color:#49e1c2;
   }
 `
 const FooterImg = styled.img`
   width: 32px;
+  margin:0;
 `
 const Sidebar = () => (
   <SidebarWrapper>
@@ -68,7 +80,7 @@ const Sidebar = () => (
     </div>
     <FooterWrapper>
       <FooterImg src={FooterIcon} alt="footer-icon"/>
-      <p>Built by El, Asim, Osama  -  hosted on Azure</p>
+      <p>Built by <Link to="/">El</Link>, <Link to="/">Asim</Link>, <Link to="/">Osama</Link>  -  hosted on <Link to="/">Azure</Link></p>
     </FooterWrapper>
   </SidebarWrapper>
 )
