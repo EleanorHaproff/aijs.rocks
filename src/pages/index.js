@@ -16,6 +16,9 @@ const Post = styled.div`
   height: 430px;
   border-radius:16px;
   margin-bottom:32px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `
 const PostTitle = styled.h2`
   height:50px;

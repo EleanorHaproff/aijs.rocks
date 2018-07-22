@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Typography from 'typography'
@@ -33,22 +33,42 @@ const ContentWrapper = styled.div`
   background-image:url('${BgPattern}');
   background-size: 150px;
 `
-const Layout = ({ children, data }) => (
-  <AppWrapper>
-    <Sidebar  />
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <ContentWrapper>
-      {children()}
-    </ContentWrapper>
-    <Header  />
-  </AppWrapper>
-)
+class Layout extends Component {
+  constructor() {
+    super();
+    this.state = { 
+      width: window.innerWidth,
+      menuOpened: false
+    };
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions);
+  }
+  updateDimensions() {
+    this.setState({
+      width: window.innerWidth
+    });
+  }
+  render() {
+    const {width} = this.state
+    return (
+      <AppWrapper>
+        {width > 768? <Sidebar  />: null}
+        <Helmet
+          title={this.props.data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+        />
+        <ContentWrapper>
+          {this.props.children()}
+        </ContentWrapper>
+        {width > 768?<Header  />: null}
+      </AppWrapper>
+    )}
+}
 
 Layout.propTypes = {
   children: PropTypes.func,

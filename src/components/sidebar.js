@@ -14,7 +14,7 @@ const SidebarWrapper = styled.div`
   flex-direction:column;
   justify-content:space-between;
   align-items:center;
-  padding:40px 0;
+  padding:40px;
   text-align:center;
   color:#FDCB25;
 `
