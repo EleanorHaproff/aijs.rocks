@@ -5,7 +5,10 @@ import Typography from 'typography'
 import styled from 'styled-components'
 
 import Header from '../components/header'
+import HeaderResponsive from '../components/header-responsive'
 import Sidebar from '../components/sidebar'
+import MenuResponsive from '../components/menu-responsive'
+
 
 import './index.css'
 import BgPattern from '../media/bg_pattern.png';
@@ -22,6 +25,9 @@ typography.injectStyles()
 
 const AppWrapper = styled.div`
   display:flex;
+  @media (max-width: 768px) {
+    flex-direction:column;
+  }
 `
 const ContentWrapper = styled.div`
   margin: 0 auto;
@@ -32,6 +38,10 @@ const ContentWrapper = styled.div`
   overflow: scroll;
   background-image:url('${BgPattern}');
   background-size: 150px;
+  @media (max-width: 768px) {
+    height: initial;
+    overflow: initial;
+  }
 `
 class Layout extends Component {
   constructor() {
@@ -54,7 +64,7 @@ class Layout extends Component {
     const {width} = this.state
     return (
       <AppWrapper>
-        {width > 768? <Sidebar  />: null}
+        {width > 768? <Sidebar  />: <HeaderResponsive />}
         <Helmet
           title={this.props.data.site.siteMetadata.title}
           meta={[
@@ -65,7 +75,7 @@ class Layout extends Component {
         <ContentWrapper>
           {this.props.children()}
         </ContentWrapper>
-        {width > 768?<Header  />: null}
+        {width > 768?<Header  />: <MenuResponsive />}
       </AppWrapper>
     )}
 }
