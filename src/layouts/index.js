@@ -7,7 +7,6 @@ import styled from 'styled-components'
 import Header from '../components/header'
 import HeaderResponsive from '../components/header-responsive'
 import Sidebar from '../components/sidebar'
-import MenuResponsive from '../components/menu-responsive'
 
 
 import './index.css'
@@ -17,14 +16,16 @@ import BgPattern from '../media/bg_pattern.png';
 const typography = new Typography({
   baseFontSize: '12px',
   baseLineHeight: 1.666,
-  headerFontFamily: ['Space Mono'],
-
+  headerFontFamily: ["Space Mono", "monospace"],
+  bodyFontFamily: ["Space Mono", "monospace"],
 })
 typography.toString()
 typography.injectStyles()
 
 const AppWrapper = styled.div`
   display:flex;
+  background-image:url('${BgPattern}');
+  background-size: 150px;
   @media (max-width: 768px) {
     flex-direction:column;
   }
@@ -36,8 +37,6 @@ const ContentWrapper = styled.div`
   padding-top: 40px;
   height: 100vh;
   overflow: scroll;
-  background-image:url('${BgPattern}');
-  background-size: 150px;
   @media (max-width: 768px) {
     height: initial;
     overflow: initial;
@@ -47,8 +46,7 @@ class Layout extends Component {
   constructor() {
     super();
     this.state = { 
-      width: window.innerWidth,
-      menuOpened: false
+      width: typeof window !== `undefined`? window.innerWidth: 1000
     };
     this.updateDimensions = this.updateDimensions.bind(this);
   }
@@ -75,7 +73,7 @@ class Layout extends Component {
         <ContentWrapper>
           {this.props.children()}
         </ContentWrapper>
-        {width > 768?<Header  />: <MenuResponsive />}
+        {width > 768?<Header  />: null}
       </AppWrapper>
     )}
 }

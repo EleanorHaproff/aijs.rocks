@@ -77,7 +77,7 @@ export default function Template({data}) {
           <p>{post.frontmatter.shortDescription}</p>
           <TagsWrapper>
             {post.frontmatter.tags.split(',').map((tag,i)=>
-              <Tag key={tag + i} style={{marginRight:8}}><Link to="/">{tag}</Link></Tag>
+              <Tag key={tag + i} style={{marginRight:8}}>{tag}</Tag>
             )}
           </TagsWrapper>
           <h6>Built by: <Link to="/">{post.frontmatter.builtBy}</Link></h6>

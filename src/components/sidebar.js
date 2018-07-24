@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { Tag } from '../globalStyles';
 import Logo from '../media/svgs/aiji-logo.svg';
 import FooterIcon from '../media/svgs/footer-icon.svg';
+import {pageQuery} from '../pages/index';
 
 //* Styles */
 const SidebarWrapper = styled.div`
@@ -68,6 +69,7 @@ const Sidebar = () => (
   <SidebarWrapper>
     <div>
       <LogoImg src={Logo} alt="aiji-logo"/>
+      {/* Will be added later..
       <h4 style={{marginBottom: 8, textAlign:'left'}}>Popular Tags</h4>
       <Hr/>
       <TagsWrapper>
@@ -76,7 +78,8 @@ const Sidebar = () => (
         <Tag><Link to="/">ml5</Link></Tag>
         <Tag><Link to="/">azure</Link></Tag>
         <Tag><Link to="/">google cloud</Link></Tag>
-      </TagsWrapper>
+      </TagsWrapper> */}
+      <p>A curated collection of inspirational AI-powered JavaScript apps</p>
     </div>
     <FooterWrapper>
       <FooterImg src={FooterIcon} alt="footer-icon"/>

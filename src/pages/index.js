@@ -21,6 +21,7 @@ const Post = styled.div`
   }
 `
 const PostTitle = styled.h2`
+  color:#FDCB25;
   height:50px;
   padding:16px;
 `
@@ -40,7 +41,7 @@ const TagsWrapper = styled.ul`
   display:flex;
   flex-wrap:wrap;
   padding:0;
-  margin:8px 0;
+  margin:8px 0 0 0;
 `
 const Details = styled.div`
   display:flex;
@@ -73,15 +74,17 @@ export default function Index({ data }) {
         .map(({ node: post }) => {
           return (
             <Post key={post.id}>
-              <PostTitle>
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </PostTitle>
-              <Thumbnail style={{backgroundImage:`url(${post.frontmatter.thumbnail})`}} />
+              <Link to={post.frontmatter.path}>
+                <PostTitle>
+                  {post.frontmatter.title}
+                </PostTitle>
+                <Thumbnail style={{backgroundImage:`url(${post.frontmatter.thumbnail})`}} />
+              </Link>
               <PostFooter>
                 <Description>{post.frontmatter.shortDescription}</Description>
                 <TagsWrapper>
                   {post.frontmatter.tags.split(',').map((tag,i)=>
-                    <Tag key={tag + i} style={{marginRight:8}}><Link to="/">{tag}</Link></Tag>
+                    <Tag key={tag + i} style={{marginRight:8}}>{tag}</Tag>
                   )}
                 </TagsWrapper>
                 <Details>
