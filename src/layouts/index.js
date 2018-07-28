@@ -12,6 +12,10 @@ import Sidebar from '../components/sidebar'
 import './index.css'
 import BgPattern from '../media/bg_pattern.png';
 
+// Syntax Highlighting
+require("prismjs/themes/prism-tomorrow.css");
+import './prism.css'
+
 // Customize Typography Plugin
 const typography = new Typography({
   baseFontSize: '12px',
