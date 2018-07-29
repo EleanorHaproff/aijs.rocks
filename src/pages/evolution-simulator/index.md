@@ -13,8 +13,5 @@ builtBy: "Aditya Thebe"
 ![Animation](./img/evolution-simulator.gif)
 ![Animation](./img/evolution-simulator.png)
 
-
-Evolution Simulator using NeuroEvolution. Created with Matter.js, p5.js and Tensorflow.js
-
 - [Demo](https://adityathebe.github.io/evolutionSimulator/)
 - [Code](https://github.com/adityathebe/evolutionSimulator)
