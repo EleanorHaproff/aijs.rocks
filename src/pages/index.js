@@ -1,72 +1,71 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import {Tag} from '../globalStyles'
+import { Tag } from '../globalStyles'
 
 const PostsWrapper = styled.div`
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   flex-wrap: wrap;
 `
 const Post = styled.div`
-  background:#232537;
+  background: #232537;
   width: calc(50% - 16px);
   height: 430px;
-  border-radius:16px;
-  margin-bottom:32px;
+  border-radius: 16px;
+  margin-bottom: 32px;
   @media (max-width: 1024px) {
     width: 100%;
   }
 `
 const PostTitle = styled.h2`
-  color:#FDCB25;
-  height:50px;
-  padding:16px;
+  color: #fdcb25;
+  height: 50px;
+  padding: 16px;
 `
 const Thumbnail = styled.div`
-  width:100%;
-  height:200px;
-  background-size:cover;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
 `
 const PostFooter = styled.div`
-  padding:16px;
+  padding: 16px;
 `
 const Description = styled.div`
-  color:white;
+  color: white;
 `
 const TagsWrapper = styled.ul`
-  list-style:none;
-  display:flex;
-  flex-wrap:wrap;
-  padding:0;
-  margin:8px 0 0 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 8px 0 0 0;
 `
 const Details = styled.div`
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  color:white
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
 `
 const AuthorWrapper = styled.div`
-  display:flex;
-  align-items:center;
-  h6{
-    color:#FDCB25;
-    margin-left:8px;
+  display: flex;
+  align-items: center;
+  h6 {
+    color: #fdcb25;
+    margin-left: 8px;
   }
-  img{
-    border-radius:8px;
-    height:32px;
+  img {
+    border-radius: 8px;
+    height: 32px;
   }
 `
 const Date = styled.h6`
-  color:#49E1C2;
+  color: #49e1c2;
 `
 export default function Index({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
-  console.log(data)
+  const { edges: posts } = data.allMarkdownRemark
   return (
     <PostsWrapper>
       {posts
@@ -75,28 +74,35 @@ export default function Index({ data }) {
           return (
             <Post key={post.id}>
               <Link to={post.frontmatter.path}>
-                <PostTitle>
-                  {post.frontmatter.title}
-                </PostTitle>
-                <Thumbnail style={{backgroundImage:`url(${post.frontmatter.thumbnail})`}} />
+                <PostTitle>{post.frontmatter.title}</PostTitle>
+                <Thumbnail
+                  style={{
+                    backgroundImage: `url(${post.frontmatter.thumbnail})`,
+                  }}
+                />
               </Link>
               <PostFooter>
                 <Description>{post.frontmatter.shortDescription}</Description>
                 <TagsWrapper>
-                  {post.frontmatter.tags.split(',').map((tag,i)=>
-                    <Tag key={tag + i} style={{marginRight:8}}>{tag}</Tag>
-                  )}
+                  {post.frontmatter.tags.split(',').map((tag, i) => (
+                    <Tag key={tag + i} style={{ marginRight: 8 }}>
+                      {tag}
+                    </Tag>
+                  ))}
                 </TagsWrapper>
                 <Details>
                   <AuthorWrapper>
-                    <img src={post.frontmatter.authorAvatar} alt={post.frontmatter.author}/>
+                    <img
+                      src={post.frontmatter.authorAvatar}
+                      alt={post.frontmatter.author}
+                    />
                     <h6>{post.frontmatter.author}</h6>
                   </AuthorWrapper>
                   <Date>{post.frontmatter.date}</Date>
                 </Details>
               </PostFooter>
             </Post>
-          );
+          )
         })}
     </PostsWrapper>
   )
@@ -123,4 +129,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
