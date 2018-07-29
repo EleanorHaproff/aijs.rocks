@@ -11,4 +11,6 @@ tags: "TensorFlow.js, PoseNet"
 builtBy: "Tero Parviainen"
 ---
 
+![Animation](./img/pose-music.png)
+
 - [Demo](https://codepen.io/teropa/full/QxLrMp/)
