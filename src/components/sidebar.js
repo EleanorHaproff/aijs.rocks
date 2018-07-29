@@ -18,6 +18,8 @@ const SidebarWrapper = styled.div`
   padding:40px;
   text-align:center;
   color:#FDCB25;
+  position:fixed;
+  left:0;
 `
 const LogoImg = styled.img`
   width: 76px;

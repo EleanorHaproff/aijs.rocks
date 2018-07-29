@@ -19,13 +19,13 @@ const typography = new Typography({
   headerFontFamily: ["Space Mono", "monospace"],
   bodyFontFamily: ["Space Mono", "monospace"],
 })
-typography.toString()
+// var css = typography.toString()
 typography.injectStyles()
-
 const AppWrapper = styled.div`
   display:flex;
   background-image:url('${BgPattern}');
   background-size: 150px;
+  overflow: auto;
   @media (max-width: 768px) {
     flex-direction:column;
   }
@@ -36,10 +36,9 @@ const ContentWrapper = styled.div`
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 40px;
   height: 100vh;
-  overflow: scroll;
+  width: calc(100% - 280px);
   @media (max-width: 768px) {
-    height: initial;
-    overflow: initial;
+    width: 100%;
   }
 `
 class Layout extends Component {
@@ -66,8 +65,7 @@ class Layout extends Component {
         <Helmet
           title={this.props.data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Space+Mono:400,700' },
           ]}
         />
         <ContentWrapper>

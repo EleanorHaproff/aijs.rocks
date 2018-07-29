@@ -20,7 +20,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             path            
             title
             author
-            thumbnail
             authorAvatar
             shortDescription
             tags

@@ -34,7 +34,11 @@ const PostFooter = styled.div`
   padding:16px;
 `
 const Description = styled.div`
-  color:white;
+  height: 57px;
+  overflow:hidden;
+  p{
+    color:white;
+  }
 `
 const TagsWrapper = styled.ul`
   list-style:none;
@@ -47,7 +51,7 @@ const Details = styled.div`
   display:flex;
   align-items:center;
   justify-content:space-between;
-  color:white
+  color:white;
 `
 const AuthorWrapper = styled.div`
   display:flex;
@@ -66,7 +70,6 @@ const Date = styled.h6`
 `
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
-  console.log(data)
   return (
     <PostsWrapper>
       {posts
@@ -78,13 +81,13 @@ export default function Index({ data }) {
                 <PostTitle>
                   {post.frontmatter.title}
                 </PostTitle>
-                <Thumbnail style={{backgroundImage:`url(${post.frontmatter.thumbnail})`}} />
+                <Thumbnail style={{backgroundImage:`url(${post.frontmatter.thumbnail.childImageSharp.responsiveSizes.src})`}} />
               </Link>
               <PostFooter>
-                <Description>{post.frontmatter.shortDescription}</Description>
+                <Description><p>{post.frontmatter.shortDescription}</p></Description>
                 <TagsWrapper>
-                  {post.frontmatter.tags.split(',').map((tag,i)=>
-                    <Tag key={tag + i} style={{marginRight:8}}>{tag}</Tag>
+                  {post.frontmatter.tags.map(tag =>
+                    <Tag key={tag} style={{marginRight:8}}>{tag}</Tag>
                   )}
                 </TagsWrapper>
                 <Details>
@@ -92,7 +95,7 @@ export default function Index({ data }) {
                     <img src={post.frontmatter.authorAvatar} alt={post.frontmatter.author}/>
                     <h6>{post.frontmatter.author}</h6>
                   </AuthorWrapper>
-                  <Date>{post.frontmatter.date}</Date>
+                  <Date><i className="icon-clock"/>{post.frontmatter.date}</Date>
                 </Details>
               </PostFooter>
             </Post>
@@ -114,7 +117,15 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             author
-            thumbnail
+            thumbnail {
+              childImageSharp {
+                responsiveSizes(maxWidth: 400) {
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
             authorAvatar
             shortDescription
             tags

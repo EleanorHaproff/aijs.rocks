@@ -2,11 +2,13 @@
 title: "TensorFlow.js Announced!"
 date: "2018-04-01T17:12:33.962Z"
 path: "/tensorflow"
-thumbnail: "https://picsum.photos/1200"
+thumbnail: "./tensorflowjs.png"
 author: "Monica Dinculescu"
 authorAvatar: "https://pbs.twimg.com/profile_images/833970306339446784/83MO53R9_400x400.jpg"
 shortDescription: "A music sequencer written in JavaScript which uses Machine Learning to try to match drums to a synth melody you create!"
-tags: "TensorFlow.js, Magenta.js"
+tags:
+    - TensorFlow.js
+    - Magenta.js
 builtBy: "Developer"
 ---
 # Now you can do machine learning in JavaScript!

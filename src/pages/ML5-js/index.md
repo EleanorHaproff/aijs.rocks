@@ -2,11 +2,13 @@
 title: "Introducing ML5.js"
 path: "/ml5-js"
 date: "2018-06-17T17:12:33.962Z"
-thumbnail: "https://picsum.photos/1200"
+thumbnail: "./ml5.png"
 author: "Monica Dinculescu"
 authorAvatar: "https://pbs.twimg.com/profile_images/833970306339446784/83MO53R9_400x400.jpg"
 shortDescription: "A music sequencer written in JavaScript which uses Machine Learning to try to match drums to a synth melody you create!"
-tags: "TensorFlow.js, Magenta.js"
+tags:
+    - TensorFlow.js
+    - Magenta.js
 builtBy: "Developer"
 ---
 

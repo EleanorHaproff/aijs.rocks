@@ -13,6 +13,8 @@ const HeaderWrapper = styled.div`
   justify-content:space-between;
   text-align:center;
   color:#FDCB25;
+  position:fixed;
+  right:0;
 `
 const MenuList = styled.ul`
  margin:0;
