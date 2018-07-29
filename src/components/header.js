@@ -44,9 +44,9 @@ const MenuLi = styled.li`
 const Header = () => (
   <HeaderWrapper>
       <MenuList style={{textAlign:'right'}}>
-        <MenuLi><Link to="/">About</Link></MenuLi>
+        <MenuLi><Link to="/about">About</Link></MenuLi>
         <MenuLi><Link to="/">Inspire</Link></MenuLi>
-        <MenuLi><Link to="/">Submit</Link></MenuLi>
+        <MenuLi><Link to="/submit">Submit</Link></MenuLi>
       </MenuList>
       <MenuList>
         <li><a href="//twitter.com"><i className="icon-twitter" /></a></li>

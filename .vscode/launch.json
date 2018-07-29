@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/src/templates/generic-page.js"
+        },
+        {
+            "name": "Launch (Develop)",
+            "type": "node",
+            "request": "launch",
+            "protocol": "inspector",
+            "program": "${workspaceRoot}/node_modules/gatsby/dist/bin/gatsby",
+            "args": ["develop", "-p", "7777"],
+            "stopOnEntry": false,
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+              "--nolazy"
+            ],
+            "env": {
+              "NODE_ENV": "development",
+              "DEBUG": "gatsby:*"
+            },
+            "console": "integratedTerminal",
+            "sourceMaps": true,
+            "outFiles": []
+        }        
+    ]
+}

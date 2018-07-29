@@ -4,6 +4,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
+  const genericPageTemplate = path.resolve(`src/templates/generic-page.js`);
 
   return graphql(`{
     allMarkdownRemark(
@@ -25,6 +26,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             shortDescription
             tags
             builtBy
+            layout
           }
         }
       }
@@ -36,9 +38,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       }
       result.data.allMarkdownRemark.edges
         .forEach(({ node }) => {
+
+          // Depening on the layout in front matter choose the right template
+          let template = blogPostTemplate;
+          if (node.frontmatter.layout === "generic") {
+            template = genericPageTemplate;
+          }
+
           createPage({
             path: node.frontmatter.path,
-            component: blogPostTemplate,
+            component: template,
             context: {} // additional data can be passed via context
           });
         });
