@@ -14,8 +14,8 @@ import BgPattern from '../media/bg_pattern.png';
 
 // Customize Typography Plugin
 const typography = new Typography({
-  baseFontSize: '12px',
-  baseLineHeight: 1.666,
+  baseFontSize: '14px',
+  baseLineHeight: 1.55,
   headerFontFamily: ["Space Mono", "monospace"],
   bodyFontFamily: ["Space Mono", "monospace"],
 })
@@ -25,7 +25,6 @@ const AppWrapper = styled.div`
   display:flex;
   background-image:url('${BgPattern}');
   background-size: 150px;
-  overflow: auto;
   @media (max-width: 768px) {
     flex-direction:column;
   }
@@ -35,7 +34,6 @@ const ContentWrapper = styled.div`
   max-width: 960px;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 40px;
-  height: 100vh;
   width: calc(100% - 280px);
   @media (max-width: 768px) {
     width: 100%;

@@ -6,6 +6,23 @@ a{
   text-decoration: none;
 
  }
+ blockquote{
+  border: 2px solid #232537;
+  background: #F7F9FC;
+  border-radius: 8px;
+ }
+ blockquote strong{
+  background: #232537;
+  color:#49E1C2;
+  padding: 0 16px;
+  border-radius: 0 0 8px;
+ }
+ blockquote p:first-child{
+  margin-bottom: 8px;
+ }
+ blockquote p:last-child {
+  padding: 0 8px 8px 8px;
+ }
  @font-face {
   font-family: 'fontello';
   src: url('../media/icons/fontello.eot?9117304');

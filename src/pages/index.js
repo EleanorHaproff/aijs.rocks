@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components';
+import EllipsisText  from 'react-ellipsis-text';
 
 import {Tag} from '../globalStyles'
 
@@ -13,7 +14,7 @@ const PostsWrapper = styled.div`
 const Post = styled.div`
   background:#232537;
   width: calc(50% - 16px);
-  height: 430px;
+  height: 440px;
   border-radius:16px;
   margin-bottom:32px;
   @media (max-width: 1024px) {
@@ -35,9 +36,16 @@ const PostFooter = styled.div`
 `
 const Description = styled.div`
   height: 57px;
-  overflow:hidden;
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   p{
     color:white;
+    font-size: 12px;
+    margin: 0;
+    span{
+      color:white;
+    }
   }
 `
 const TagsWrapper = styled.ul`
@@ -84,7 +92,7 @@ export default function Index({ data }) {
                 <Thumbnail style={{backgroundImage:`url(${post.frontmatter.thumbnail.childImageSharp.responsiveSizes.src})`}} />
               </Link>
               <PostFooter>
-                <Description><p>{post.frontmatter.shortDescription}</p></Description>
+                <Description><p> <EllipsisText text={post.frontmatter.shortDescription} length={160} /></p></Description>
                 <TagsWrapper>
                   {post.frontmatter.tags.map(tag =>
                     <Tag key={tag} style={{marginRight:8}}>{tag}</Tag>
