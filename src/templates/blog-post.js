@@ -20,7 +20,13 @@ export default function Template({data}) {
 
   return (
     <div>
-      <Helmet title={`aijs.rocks - ${post.frontmatter.title}`} />
+      <Helmet
+        title={`aijs.rocks - ${post.frontmatter.title}`}
+          meta={[
+            { name: 'description', content: post.frontmatter.shortDescription },
+            { name: 'keywords', content: post.frontmatter.tags },
+          ]}
+      />
       <div>
         <BlogHeaderWrapper>
           <h1>{post.frontmatter.title}</h1>
