@@ -1,11 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import {
-  BlogHeaderWrapper, 
-  ContentWrapper, 
-} from '../globalStyles'
-
+import { BlogHeaderWrapper, ContentWrapper } from '../globalStyles'
 
 export default function Template({ data }) {
   const post = data.markdownRemark
@@ -33,4 +29,3 @@ export const pageQuery = graphql`
     }
   }
 `
-;

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Typography from 'typography'
@@ -8,16 +8,15 @@ import Header from '../components/header'
 import HeaderResponsive from '../components/header-responsive'
 import Sidebar from '../components/sidebar'
 
-
 import './index.css'
-import BgPattern from '../media/bg_pattern.png';
+import BgPattern from '../media/bg_pattern.png'
 
 // Customize Typography Plugin
 const typography = new Typography({
   baseFontSize: '12px',
   baseLineHeight: 1.666,
-  headerFontFamily: ["Space Mono", "monospace"],
-  bodyFontFamily: ["Space Mono", "monospace"],
+  headerFontFamily: ['Space Mono', 'monospace'],
+  bodyFontFamily: ['Space Mono', 'monospace'],
 })
 typography.toString()
 typography.injectStyles()
@@ -44,25 +43,25 @@ const ContentWrapper = styled.div`
 `
 class Layout extends Component {
   constructor() {
-    super();
-    this.state = { 
-      width: typeof window !== `undefined`? window.innerWidth: 1000
-    };
-    this.updateDimensions = this.updateDimensions.bind(this);
+    super()
+    this.state = {
+      width: typeof window !== `undefined` ? window.innerWidth : 1000,
+    }
+    this.updateDimensions = this.updateDimensions.bind(this)
   }
   componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions);
+    window.addEventListener('resize', this.updateDimensions)
   }
   updateDimensions() {
     this.setState({
-      width: window.innerWidth
-    });
+      width: window.innerWidth,
+    })
   }
   render() {
-    const {width} = this.state
+    const { width } = this.state
     return (
       <AppWrapper>
-        {width > 768? <Sidebar  />: <HeaderResponsive />}
+        {width > 768 ? <Sidebar /> : <HeaderResponsive />}
         <Helmet
           title={this.props.data.site.siteMetadata.title}
           meta={[
@@ -70,12 +69,11 @@ class Layout extends Component {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <ContentWrapper>
-          {this.props.children()}
-        </ContentWrapper>
-        {width > 768?<Header  />: null}
+        <ContentWrapper>{this.props.children()}</ContentWrapper>
+        {width > 768 ? <Header /> : null}
       </AppWrapper>
-    )}
+    )
+  }
 }
 
 Layout.propTypes = {
