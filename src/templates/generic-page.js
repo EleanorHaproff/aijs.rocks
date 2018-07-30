@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import Logo from '../media/svgs/aiji-logo.svg'
 import { BlogHeaderWrapper, ContentWrapper } from '../globalStyles'
 
-
 export default function Template({ data }) {
   const post = data.markdownRemark
   return (
