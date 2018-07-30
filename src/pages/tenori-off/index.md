@@ -8,6 +8,7 @@ authorAvatar: "https://pbs.twimg.com/profile_images/779808817785675776/Hf9AwdFs_
 shortDescription: "A music sequencer written in JavaScript which uses Machine Learning to try to match drums to a synth melody you create!"
 tags: "Magenta.js, TensorFlow.js"
 builtBy: "Monica Dinculescu"
+layout: "inspire"
 ---
 
 ![Animation](./img/animation.gif)

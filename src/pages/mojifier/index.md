@@ -8,6 +8,7 @@ authorAvatar: "https://pbs.twimg.com/profile_images/833970306339446784/83MO53R9_
 shortDescription: "TheMojifier is a Twitter bot which replaces peoples faces in images with emojis matching their emotion"
 tags: "API, Azure Face API"
 builtBy: "Asim Hussain"
+layout: "inspire"
 ---
 
 TheMojifier is a Twitter bot which replaces peoples faces in images with emojis matching their emotion, like so:
