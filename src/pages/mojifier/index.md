@@ -1,7 +1,7 @@
 ---
 title: "The Mojifier"
 date: "2018-04-01T17:12:33.962Z"
-path: "/mojifier"
+path: "/inspire/mojifier"
 thumbnail: "https://picsum.photos/1200"
 author: "Asim Hussain"
 authorAvatar: "https://pbs.twimg.com/profile_images/833970306339446784/83MO53R9_400x400.jpg"
