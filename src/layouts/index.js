@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import Header from '../components/header'
 import HeaderResponsive from '../components/header-responsive'
 import Sidebar from '../components/sidebar'
+import Logo from '../media/svgs/aiji-logo.svg'
 
 import './index.css'
 import BgPattern from '../media/bg_pattern.png'
@@ -65,8 +66,29 @@ class Layout extends Component {
         <Helmet
           title={this.props.data.site.siteMetadata.title}
           meta={[
+            {
+              name: 'description',
+              content:
+                'A curated collection of inspirational AI-powered JavaScript apps. Find examples of artificial intelligence and machine learning with Javascript',
+            },
+            {
+              name: 'keywords',
+              content:
+                'ai, machine learning, javascript, artificial intelligence, neural networks, js, tensorflow.js, posenet, mobilenet, ',
+            },
             { name: 'twitter:card', content: 'summary' },
             { name: 'twitter:site', content: '@aijavascript' },
+            {
+              property: 'og:title',
+              content: this.props.data.site.siteMetadata.title,
+            },
+            {
+              property: 'og:description',
+              content:
+                'A curated collection of inspirational AI-powered JavaScript apps. Find examples of artificial intelligence and machine learning with Javascript',
+            },
+            { property: 'og:image', content: Logo },
+            { property: 'og:url', content: 'https://aijs.rocks/' },
           ]}
         />
         <ContentWrapper>{this.props.children()}</ContentWrapper>

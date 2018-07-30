@@ -2,10 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Logo from '../media/svgs/aiji-logo.svg'
-import {
-  BlogHeaderWrapper, 
-  ContentWrapper, 
-} from '../globalStyles'
+import { BlogHeaderWrapper, ContentWrapper } from '../globalStyles'
 
 
 export default function Template({ data }) {
@@ -17,7 +14,10 @@ export default function Template({ data }) {
         meta={[
           { name: 'description', content: post.frontmatter.shortDescription },
           { property: 'og:title', content: post.frontmatter.title },
-          { property: 'og:description', content: post.frontmatter.shortDescription },
+          {
+            property: 'og:description',
+            content: post.frontmatter.shortDescription,
+          },
           { property: 'og:image', content: Logo },
           { property: 'og:url', content: post.frontmatter.path },
         ]}
@@ -44,4 +44,3 @@ export const pageQuery = graphql`
     }
   }
 `
-;
