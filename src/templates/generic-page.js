@@ -11,7 +11,12 @@ export default function Template({ data }) {
   const post = data.markdownRemark
   return (
     <div>
-      <Helmet title={`aijs.rocks - ${post.frontmatter.title}`} />
+      <Helmet
+        title={`aijs.rocks - ${post.frontmatter.title}`}
+        meta={[
+          { name: 'description', content: post.frontmatter.shortDescription },
+        ]}
+      />
       <BlogHeaderWrapper>
         <h1>{post.frontmatter.title}</h1>
         <hr />
@@ -29,6 +34,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        shortDescription
       }
     }
   }
