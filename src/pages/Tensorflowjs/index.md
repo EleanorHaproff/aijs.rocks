@@ -31,7 +31,3 @@ Use TensorFlow.js model converters to run pre-existing TensorFlow models right i
 ### Retrain Existing Models
 
 Retrain pre-existing ML models using sensor data connected to the browser, or other client-side data.
-
-> **Note**
-> 
-> The API by default doesn’t return the emotion, you need to explicitly specify the query param `returnFaceAttributes=emotion`
