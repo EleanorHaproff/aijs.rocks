@@ -25,6 +25,11 @@ export default function Template({data}) {
           meta={[
             { name: 'description', content: post.frontmatter.shortDescription },
             { name: 'keywords', content: post.frontmatter.tags },
+            { property: 'og:title', content: post.frontmatter.title },
+            { property: 'og:description', content: post.frontmatter.shortDescription },
+            { property: 'og:image', content: post.frontmatter.thumbnail },
+            { property: 'og:url', content: post.frontmatter.path },
+            { property: 'og:type', content: 'article' },
           ]}
       />
       <div>

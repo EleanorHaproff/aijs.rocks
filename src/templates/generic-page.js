@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import Logo from '../media/svgs/aiji-logo.svg'
 import {
   BlogHeaderWrapper, 
   ContentWrapper, 
@@ -15,6 +16,10 @@ export default function Template({ data }) {
         title={`aijs.rocks - ${post.frontmatter.title}`}
         meta={[
           { name: 'description', content: post.frontmatter.shortDescription },
+          { property: 'og:title', content: post.frontmatter.title },
+          { property: 'og:description', content: post.frontmatter.shortDescription },
+          { property: 'og:image', content: Logo },
+          { property: 'og:url', content: post.frontmatter.path },
         ]}
       />
       <BlogHeaderWrapper>

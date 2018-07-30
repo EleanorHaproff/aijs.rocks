@@ -64,6 +64,10 @@ class Layout extends Component {
         {width > 768 ? <Sidebar /> : <HeaderResponsive />}
         <Helmet
           title={this.props.data.site.siteMetadata.title}
+          meta={[
+            { name: 'twitter:card', content: 'summary' },
+            { name: 'twitter:site', content: '@aijavascript' },
+          ]}
         />
         <ContentWrapper>{this.props.children()}</ContentWrapper>
         {width > 768 ? <Header /> : null}
