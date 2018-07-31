@@ -4,4 +4,10 @@
 .blog-post-content code.language-text {
     padding: 0.3em;
     border-radius: 0.3em;
+    background: #232537;
+}
+
+/* Set the background color to the brand background */
+.blog-post-content pre[class*="language-"] {
+    background: #232537;
 }
