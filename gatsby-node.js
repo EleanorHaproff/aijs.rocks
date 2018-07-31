@@ -21,8 +21,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             path            
             title
             author
-            thumbnail
             authorAvatar
+            thumbnail {
+              childImageSharp {
+                responsiveSizes(maxWidth: 400) {
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
             shortDescription
             tags
             builtBy

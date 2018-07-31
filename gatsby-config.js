@@ -6,6 +6,7 @@ module.exports = {
     `gatsby-plugin-typography`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -23,12 +24,10 @@ module.exports = {
         {
           resolve: `gatsby-remark-images`,
           options: {
-            // It's important to specify the maxWidth (in pixels) of
-            // the content container as this plugin uses this as the
-            // base for generating different widths of each image.
             maxWidth: 590,
           },
         },
+        "gatsby-remark-copy-linked-files"
       ],
     },
   },

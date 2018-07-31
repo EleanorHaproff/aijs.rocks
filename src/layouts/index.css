@@ -1,10 +1,27 @@
-h1,h2,h3,h4,h5,h6,p{
+h1,h2,h3,h4,h5,h6,p,ul,li,span{
   color: #232537;
 }
 a{
   color:#FDCB25;
   text-decoration: none;
 
+ }
+ blockquote{
+  border: 2px solid #232537;
+  background: #F7F9FC;
+  border-radius: 8px;
+ }
+ blockquote p:first-child{
+  margin-bottom: 8px;
+ }
+ blockquote p:first-child strong{
+  background: #232537;
+  color:#49E1C2;
+  padding: 3px 16px;
+  border-radius:  6px 0 8px 0;
+ }
+ blockquote p:last-child {
+  padding: 0 8px 8px 8px;
  }
  @font-face {
   font-family: 'fontello';
