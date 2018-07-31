@@ -19,7 +19,21 @@ export default function Template({ data }) {
 
   return (
     <div>
-      <Helmet title={`aijs.rocks - ${post.frontmatter.title}`} />
+      <Helmet
+        title={`aijs.rocks - ${post.frontmatter.title}`}
+        meta={[
+          { name: 'description', content: post.frontmatter.shortDescription },
+          { name: 'keywords', content: post.frontmatter.tags },
+          { property: 'og:title', content: post.frontmatter.title },
+          {
+            property: 'og:description',
+            content: post.frontmatter.shortDescription,
+          },
+          { property: 'og:image', content: post.frontmatter.thumbnail },
+          { property: 'og:url', content: post.frontmatter.path },
+          { property: 'og:type', content: 'article' },
+        ]}
+      />
       <div>
         <BlogHeaderWrapper>
           <h1>{post.frontmatter.title}</h1>

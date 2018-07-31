@@ -1,13 +1,14 @@
 ---
 title: "SeeClarke.js"
 date: "2018-07-28T17:12:33.962Z"
-path: "/see-clarke"
+path: "/inspire/see-clarke"
 thumbnail: "https://picsum.photos/1200"
 author: "Oz Ramos"
 authorAvatar: "https://pbs.twimg.com/profile_images/1014674288656306176/Rl2YNjtL_400x400.jpg"
 shortDescription: "A thin wrapper around PoseNet and TensorFlow.js that calculates head-tracked cursor positions for a variable number of users at once."
 tags: "TensorFlow.js, PoseNet"
 builtBy: "Oz Ramos"
+layout: "inspire"
 ---
 
 ![Animation](./img/see-clarke.png)
