@@ -11,14 +11,14 @@ a{
   background: #F7F9FC;
   border-radius: 8px;
  }
- blockquote strong{
-  background: #232537;
-  color:#49E1C2;
-  padding: 0 16px;
-  border-radius: 0 0 8px;
- }
  blockquote p:first-child{
   margin-bottom: 8px;
+ }
+ blockquote p:first-child strong{
+  background: #232537;
+  color:#49E1C2;
+  padding: 3px 16px;
+  border-radius:  6px 0 8px 0;
  }
  blockquote p:last-child {
   padding: 0 8px 8px 8px;

@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import { Tag } from '../globalStyles';
-import Logo from '../media/svgs/aiji-logo.svg';
-import FooterIcon from '../media/svgs/footer-icon.svg';
-import {pageQuery} from '../pages/index';
+import { Tag } from '../globalStyles'
+import Logo from '../media/svgs/aiji-logo.svg'
+import FooterIcon from '../media/svgs/footer-icon.svg'
+import { pageQuery } from '../pages/index'
 
 //* Styles */
 const SidebarWrapper = styled.div`
@@ -31,46 +31,46 @@ const Hr = styled.hr`
   width: 40px;
 `
 const TagsWrapper = styled.ul`
-  margin:0;
-  list-style:none;
+  margin: 0;
+  list-style: none;
 `
 const FooterWrapper = styled.div`
   position: relative;
-  :hover p{
+  :hover p {
     visibility: visiable;
-    opacity:1;
+    opacity: 1;
   }
-  p{
-    opacity:0;
+  p {
+    opacity: 0;
     position: absolute;
     top: 8px;
     left: 40px;
     width: 328px;
     background: #232537;
-    color:#FDCB25;
+    color: #fdcb25;
     border-radius: 4px;
     font-size: 10px;
     padding: 2px 0;
     visibility: none;
-    opacity:0;
-    transition: all .3s ease-in;
-    :hover{
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    :hover {
       visibility: visiable;
-      opacity:1;
+      opacity: 1;
     }
   }
-  a{
-    color:#49e1c2;
+  a {
+    color: #49e1c2;
   }
 `
 const FooterImg = styled.img`
   width: 32px;
-  margin:0;
+  margin: 0;
 `
 const Sidebar = () => (
   <SidebarWrapper>
     <div>
-      <LogoImg src={Logo} alt="aiji-logo"/>
+      <LogoImg src={Logo} alt="aiji-logo" />
       {/* Will be added later..
       <h4 style={{marginBottom: 8, textAlign:'left'}}>Popular Tags</h4>
       <Hr/>
@@ -84,8 +84,11 @@ const Sidebar = () => (
       <p>A curated collection of inspirational AI-powered JavaScript apps</p>
     </div>
     <FooterWrapper>
-      <FooterImg src={FooterIcon} alt="footer-icon"/>
-      <p>Built by <Link to="/">El</Link>, <Link to="/">Asim</Link>, <Link to="/">Osama</Link>  -  hosted on <Link to="/">Azure</Link></p>
+      <FooterImg src={FooterIcon} alt="footer-icon" />
+      <p>
+        Built by <Link to="/">El</Link>, <Link to="/">Asim</Link>,{' '}
+        <Link to="/">Osama</Link> - hosted on <Link to="/">Azure</Link>
+      </p>
     </FooterWrapper>
   </SidebarWrapper>
 )
