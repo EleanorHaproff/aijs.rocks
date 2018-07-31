@@ -55,12 +55,12 @@ const Header = () => (
     </MenuList>
     <MenuList>
       <li>
-        <a href="//twitter.com">
+        <a href="//twitter.com/AiJavaScript" target="_blank" >
           <i className="icon-twitter" />
         </a>
       </li>
       <li>
-        <a href="//github.com">
+        <a href="//github.com/aijavascript/aijs.rocks" target="_blank" >
           <i className="icon-github" />
         </a>
       </li>
