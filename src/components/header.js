@@ -4,15 +4,17 @@ import styled from 'styled-components'
 
 //* Styles */
 const HeaderWrapper = styled.div`
-  background: #232537;
-  max-width: 140px;
-  height: 100vh;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  color: #fdcb25;
+  background:#232537;
+  max-width:140px;
+  height:100vh;
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  text-align:center;
+  color:#FDCB25;
+  position:fixed;
+  right:0;
 `
 const MenuList = styled.ul`
   margin: 0;

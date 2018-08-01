@@ -7,20 +7,24 @@ import styled from 'styled-components'
 import Header from '../components/header'
 import HeaderResponsive from '../components/header-responsive'
 import Sidebar from '../components/sidebar'
+import Logo from '../media/svgs/aiji-logo.svg'
 
 import './index.css'
 import BgPattern from '../media/bg_pattern.png'
 
+// Syntax Highlighting
+require("prismjs/themes/prism-tomorrow.css");
+import './prism.css'
+
 // Customize Typography Plugin
 const typography = new Typography({
-  baseFontSize: '12px',
-  baseLineHeight: 1.666,
-  headerFontFamily: ['Space Mono', 'monospace'],
-  bodyFontFamily: ['Space Mono', 'monospace'],
+  baseFontSize: '14px',
+  baseLineHeight: 1.55,
+  headerFontFamily: ["Space Mono", "monospace"],
+  bodyFontFamily: ["Space Mono", "monospace"],
 })
-typography.toString()
+// var css = typography.toString()
 typography.injectStyles()
-
 const AppWrapper = styled.div`
   display:flex;
   background-image:url('${BgPattern}');
@@ -34,11 +38,9 @@ const ContentWrapper = styled.div`
   max-width: 960px;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 40px;
-  height: 100vh;
-  overflow: scroll;
+  width: calc(100% - 280px);
   @media (max-width: 768px) {
-    height: initial;
-    overflow: initial;
+    width: 100%;
   }
 `
 class Layout extends Component {
@@ -65,8 +67,30 @@ class Layout extends Component {
         <Helmet
           title={this.props.data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Space+Mono:400,700' },
+            {
+              name: 'description',
+              content:
+                'A curated collection of inspirational AI-powered JavaScript apps. Find examples of artificial intelligence and machine learning with Javascript',
+            },
+            {
+              name: 'keywords',
+              content:
+                'ai, machine learning, javascript, artificial intelligence, neural networks, js, tensorflow.js, posenet, mobilenet, ',
+            },
+            { name: 'twitter:card', content: 'summary' },
+            { name: 'twitter:site', content: '@aijavascript' },
+            {
+              property: 'og:title',
+              content: this.props.data.site.siteMetadata.title,
+            },
+            {
+              property: 'og:description',
+              content:
+                'A curated collection of inspirational AI-powered JavaScript apps. Find examples of artificial intelligence and machine learning with Javascript',
+            },
+            { property: 'og:image', content: Logo },
+            { property: 'og:url', content: 'https://aijs.rocks/' },
           ]}
         />
         <ContentWrapper>{this.props.children()}</ContentWrapper>

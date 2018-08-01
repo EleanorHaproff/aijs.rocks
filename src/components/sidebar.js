@@ -9,15 +9,17 @@ import { pageQuery } from '../pages/index'
 
 //* Styles */
 const SidebarWrapper = styled.div`
-  width: 140px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-  text-align: center;
-  color: #fdcb25;
+  width:140px;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  padding:40px;
+  text-align:center;
+  color:#FDCB25;
+  position:fixed;
+  left:0;
 `
 const LogoImg = styled.img`
   width: 76px;

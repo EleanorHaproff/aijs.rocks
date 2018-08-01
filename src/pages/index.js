@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import EllipsisText  from 'react-ellipsis-text';
 
 import { Tag } from '../globalStyles'
 
@@ -13,9 +14,9 @@ const PostsWrapper = styled.div`
 const Post = styled.div`
   background: #232537;
   width: calc(50% - 16px);
-  height: 430px;
-  border-radius: 16px;
-  margin-bottom: 32px;
+  height: 440px;
+  border-radius:16px;
+  margin-bottom:32px;
   @media (max-width: 1024px) {
     width: 100%;
   }
@@ -34,7 +35,18 @@ const PostFooter = styled.div`
   padding: 16px;
 `
 const Description = styled.div`
-  color: white;
+  height: 57px;
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  p{
+    color:white;
+    font-size: 12px;
+    margin: 0;
+    span{
+      color:white;
+    }
+  }
 `
 const TagsWrapper = styled.ul`
   list-style: none;
@@ -44,10 +56,10 @@ const TagsWrapper = styled.ul`
   margin: 8px 0 0 0;
 `
 const Details = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:white;
 `
 const AuthorWrapper = styled.div`
   display: flex;
@@ -65,8 +77,8 @@ const Date = styled.h6`
   color: #49e1c2;
 `
 export default function Index({ data }) {
-  const { edges: posts } = data.allMarkdownRemark
-  console.log(data)
+  const { edges: posts } = data.allMarkdownRemark;
+  console.log(posts)
   return (
     <PostsWrapper>
       {posts
@@ -75,21 +87,17 @@ export default function Index({ data }) {
           return (
             <Post key={post.id}>
               <Link to={post.frontmatter.path}>
-                <PostTitle>{post.frontmatter.title}</PostTitle>
-                <Thumbnail
-                  style={{
-                    backgroundImage: `url(${post.frontmatter.thumbnail})`,
-                  }}
-                />
+                <PostTitle>
+                  {post.frontmatter.title}
+                </PostTitle>
+                <Thumbnail style={{backgroundImage:`url(${post.frontmatter.thumbnail.childImageSharp.responsiveSizes.src})`}} />
               </Link>
               <PostFooter>
-                <Description>{post.frontmatter.shortDescription}</Description>
+                <Description><p> <EllipsisText text={post.frontmatter.shortDescription} length={150} /></p></Description>
                 <TagsWrapper>
-                  {post.frontmatter.tags.split(',').map((tag, i) => (
-                    <Tag key={tag + i} style={{ marginRight: 8 }}>
-                      {tag}
-                    </Tag>
-                  ))}
+                  {post.frontmatter.tags.map(tag =>
+                    <Tag key={tag} style={{marginRight:8}}>{tag}</Tag>
+                  )}
                 </TagsWrapper>
                 <Details>
                   <AuthorWrapper>
@@ -99,7 +107,7 @@ export default function Index({ data }) {
                     />
                     <h6>{post.frontmatter.author}</h6>
                   </AuthorWrapper>
-                  <Date>{post.frontmatter.date}</Date>
+                  <Date><i className="icon-clock"/>{post.frontmatter.date}</Date>
                 </Details>
               </PostFooter>
             </Post>
@@ -124,7 +132,15 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             author
-            thumbnail
+            thumbnail {
+              childImageSharp {
+                responsiveSizes(maxWidth: 400) {
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
             authorAvatar
             shortDescription
             tags
