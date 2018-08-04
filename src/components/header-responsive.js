@@ -64,6 +64,9 @@ const SocialMedia = styled.ul`
     margin:0 8px;
   }
 `
+const MenuIcon = styled.span`
+  font-size: 22px;
+`
 class HeaderResponsive extends Component {
   constructor() {
     super()
@@ -81,7 +84,7 @@ class HeaderResponsive extends Component {
         <Headroom>
           <HeaderWrapper>
             <img src={Logo} alt="aiji-logo" />
-            <i onClick={this.toggleMenu} className="icon-menu" />
+            <MenuIcon onClick={this.toggleMenu} className="icon-menu"><span className="path1"></span><span className="path2"></span><span className="path3"></span><span className="path4"></span></MenuIcon>
           </HeaderWrapper>
         </Headroom>
           <MenuWrapper opened={this.state.menuOpened}>

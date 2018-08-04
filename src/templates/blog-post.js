@@ -8,9 +8,13 @@ import {
   TagsWrapper,
   ContentWrapper,
   AuthorWrapper,
-  PostFooter,
-  FooterLeft,
+  PostBuilder,
+  BuilderLeft,
   SocialLogo,
+  DemoLink,
+  DemoIconsWrapper,
+  DemoIcon,
+  BuiltBy
 } from '../globalStyles'
 
 export default function Template({ data }) {
@@ -43,35 +47,29 @@ export default function Template({ data }) {
               <Tag key={tag} style={{marginRight:8}}>{tag}</Tag>
             )}
           </TagsWrapper>
-          <h6>
-            Built by: <Link to="/">{post.frontmatter.builtBy}</Link>
-          </h6>
-        </BlogHeaderWrapper>
-        <ContentWrapper
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-        {/* Only show the author footer if we are a blog post */}
-        {kind === 'blog' ? (
-          <PostFooter>
-            <FooterLeft>
+          <PostBuilder>
+            <BuilderLeft>
+              <BuiltBy>Built by:</BuiltBy>
               <AuthorWrapper>
                 <img
                   src={post.frontmatter.authorAvatar}
                   alt={post.frontmatter.author}
                 />
-                <h6>{post.frontmatter.author}</h6>
+                <h6>{post.frontmatter.author}<SocialLogo href="//twitter.com"><i className="icon-twitter" /></SocialLogo></h6>
               </AuthorWrapper>
-              <p>{post.frontmatter.shortDescription}</p>
-            </FooterLeft>
-            <div>
-              <SocialLogo href="//github.com"><i className="icon-github" /></SocialLogo>
-              <SocialLogo href="//github.com"><i className="icon-twitter" /></SocialLogo>
-            </div>
-          </PostFooter>
-        ) : (
-          ''
-        )}
+            </BuilderLeft>
+            <DemoIconsWrapper>
+              <DemoLink href="#"><DemoIcon className="icon-app"><span className="path1"></span><span className="path2"></span></DemoIcon> View app</DemoLink>
+              <DemoLink href="#"><DemoIcon className="icon-code"><span className="path1"></span><span className="path2"></span><span className="path3"></span><span className="path4"></span></DemoIcon>View code</DemoLink>
+              <DemoLink href="#"><DemoIcon className="icon-link"><span className="path1"></span><span className="path2"></span><span className="path3"></span></DemoIcon>View Link</DemoLink>
+            </DemoIconsWrapper>
+          </PostBuilder>
+        </BlogHeaderWrapper>
+
+        <ContentWrapper
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </div>
     </div>
   )
