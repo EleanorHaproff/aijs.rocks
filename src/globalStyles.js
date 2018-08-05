@@ -10,13 +10,13 @@ export const Tag = styled.li`
   background: #fdcb25;
 `
 export const BlogHeaderWrapper = styled.div`
-  text-align:center;
-  background:white;
-  box-shadow: 0px 0px 17px 0px rgba(194,194,194,0.3);
-  padding:32px;
+  text-align: center;
+  background: white;
+  box-shadow: 0px 0px 17px 0px rgba(194, 194, 194, 0.3);
+  padding: 32px;
   border-radius: 40px;
-  margin-bottom:32px;
-  hr{
+  margin-bottom: 32px;
+  hr {
     height: 4px;
     background: #232537;
     width: 40px;
@@ -25,61 +25,66 @@ export const BlogHeaderWrapper = styled.div`
   }
 `
 export const TagsWrapper = styled.ul`
-  list-style:none;
-  display:flex;
-  flex-wrap:wrap;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding:0;
-  margin:8px 0;
+  padding: 0;
+  margin: 8px 0;
 `
 export const ContentWrapper = styled.div`
-  background:white;
-  box-shadow: 0px 0px 17px 0px rgba(194,194,194,0.3);
-  padding:32px;
+  background: white;
+  box-shadow: 0px 0px 17px 0px rgba(194, 194, 194, 0.3);
+  padding: 32px;
   border-radius: 40px;
-  margin-bottom:32px;
+  margin-bottom: 32px;
 `
 export const PostBuilder = styled.div`
   border-radius: 40px;
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
+  flex-direction: column;
   margin-bottom: 32px;
 `
 export const BuiltBy = styled.h6`
   margin-bottom: 8px;
   text-align: left;
 `
-export const BuilderLeft = styled.div`
-  width:50%;
+export const BuilderWrapper = styled.div`
+  margin: 8px 0;
 `
-export const AuthorWrapper = styled.div`
-  display:flex;
-  align-items:center;
-  h6{
+export const AuthorWrapper = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h6 {
     margin-left: 8px;
-    margin-bottom:0;
+    margin-right: 8px;
+    margin-bottom: 0;
   }
-  img{
-    width:40px;
+  img {
+    width: 40px;
     border: 2px solid #232537;
     border-radius: 8px;
-    margin-bottom:0;
+    margin-bottom: 0;
   }
 `
 export const SocialLogo = styled.span`
   font-size: 16px;
   margin-left: 16px;
 `
-export const DemoIconsWrapper = styled.div`
+export const DemoIconsWrapper = styled.p`
   display: flex;
+  justify-content: center;
+  padding: 8px 0;
 `
 export const DemoLink = styled.a`
   display: flex;
   align-items: center;
   font-size: 12px;
   margin-left: 16px;
-  color:#232537
+  color: #232537;
 `
 export const DemoIcon = styled.span`
   font-size: 32px;

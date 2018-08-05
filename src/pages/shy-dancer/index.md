@@ -1,5 +1,8 @@
 ---
 title: "Shy Dancer"
+demo:
+code:
+source:
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/shy-dancer"
 thumbnail: "./img/shy-dancer.png"
@@ -14,5 +17,4 @@ layout: "inspire"
 
 ![Animation](./img/shy-dancer.png)
 
-
-- [Demo](https://codepen.io/cassie-codes/pen/jKaVqo/)
+* [Demo](https://codepen.io/cassie-codes/pen/jKaVqo/)

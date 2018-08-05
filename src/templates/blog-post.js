@@ -9,12 +9,12 @@ import {
   ContentWrapper,
   AuthorWrapper,
   PostBuilder,
-  BuilderLeft,
+  BuilderWrapper,
   SocialLogo,
   DemoLink,
   DemoIconsWrapper,
   DemoIcon,
-  BuiltBy
+  BuiltBy,
 } from '../globalStyles'
 
 export default function Template({ data }) {
@@ -42,28 +42,57 @@ export default function Template({ data }) {
           <h1>{post.frontmatter.title}</h1>
           <hr />
           <p>{post.frontmatter.shortDescription}</p>
-          <TagsWrapper>
-            {post.frontmatter.tags.map(tag =>
-              <Tag key={tag} style={{marginRight:8}}>{tag}</Tag>
+
+          <AuthorWrapper>
+            <h6>by</h6>
+            <img
+              src={post.frontmatter.authorAvatar}
+              alt={post.frontmatter.author}
+            />
+            <h6>
+              <a target="_blank" href={post.frontmatter.authorLink}>
+                {post.frontmatter.author}
+              </a>
+            </h6>
+          </AuthorWrapper>
+
+          <DemoIconsWrapper>
+            {post.frontmatter.demo && (
+              <DemoLink target="_blank" href={post.frontmatter.demo}>
+                <DemoIcon className="icon-app">
+                  <span className="path1" />
+                  <span className="path2" />
+                </DemoIcon>Demo
+              </DemoLink>
             )}
+            {post.frontmatter.code && (
+              <DemoLink target="_blank" href={post.frontmatter.code}>
+                <DemoIcon className="icon-code">
+                  <span className="path1" />
+                  <span className="path2" />
+                  <span className="path3" />
+                  <span className="path4" />
+                </DemoIcon>Code
+              </DemoLink>
+            )}
+            {post.frontmatter.link && (
+              <DemoLink target="_blank" href={post.frontmatter.link}>
+                <DemoIcon className="icon-link">
+                  <span className="path1" />
+                  <span className="path2" />
+                  <span className="path3" />
+                </DemoIcon>Link
+              </DemoLink>
+            )}
+          </DemoIconsWrapper>
+
+          <TagsWrapper>
+            {post.frontmatter.tags.map(tag => (
+              <Tag key={tag} style={{ marginRight: 8 }}>
+                {tag}
+              </Tag>
+            ))}
           </TagsWrapper>
-          <PostBuilder>
-            <BuilderLeft>
-              <BuiltBy>Built by:</BuiltBy>
-              <AuthorWrapper>
-                <img
-                  src={post.frontmatter.authorAvatar}
-                  alt={post.frontmatter.author}
-                />
-                <h6>{post.frontmatter.author}<SocialLogo href="//twitter.com"><i className="icon-twitter" /></SocialLogo></h6>
-              </AuthorWrapper>
-            </BuilderLeft>
-            <DemoIconsWrapper>
-              <DemoLink href="#"><DemoIcon className="icon-app"><span className="path1"></span><span className="path2"></span></DemoIcon> View app</DemoLink>
-              <DemoLink href="#"><DemoIcon className="icon-code"><span className="path1"></span><span className="path2"></span><span className="path3"></span><span className="path4"></span></DemoIcon>View code</DemoLink>
-              <DemoLink href="#"><DemoIcon className="icon-link"><span className="path1"></span><span className="path2"></span><span className="path3"></span></DemoIcon>View Link</DemoLink>
-            </DemoIconsWrapper>
-          </PostBuilder>
         </BlogHeaderWrapper>
 
         <ContentWrapper
@@ -80,13 +109,15 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        demo
+        code
         date(formatString: "MMMM DD, YYYY")
         path
         author
         authorAvatar
+        authorLink
         shortDescription
         tags
-        builtBy
       }
     }
   }

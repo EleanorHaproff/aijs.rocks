@@ -1,5 +1,8 @@
 ---
 title: "Evolution Simulator"
+demo:
+code:
+source: 
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/evolution-simulator"
 thumbnail: "./img/evolution-simulator.png"
@@ -18,5 +21,5 @@ layout: "inspire"
 ![Animation](./img/evolution-simulator.gif)
 ![Animation](./img/evolution-simulator.png)
 
-- [Demo](https://adityathebe.github.io/evolutionSimulator/)
-- [Code](https://github.com/adityathebe/evolutionSimulator)
+* [Demo](https://adityathebe.github.io/evolutionSimulator/)
+* [Code](https://github.com/adityathebe/evolutionSimulator)
