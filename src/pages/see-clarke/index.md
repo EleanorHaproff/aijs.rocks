@@ -1,5 +1,8 @@
 ---
 title: "SeeClarke.js"
+demo:
+code:
+link:
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/see-clarke"
 thumbnail: "./img/see-clarke.png"
@@ -15,6 +18,6 @@ layout: "inspire"
 
 ![Animation](./img/see-clarke.png)
 
-- [Demo](https://codepen.io/labofoz/full/RBWvBp)
-- [Code](https://github.com/LabOfOz/SeeClarke)
-- [Npm Package](https://www.npmjs.com/package)
+* [Demo](https://codepen.io/labofoz/full/RBWvBp)
+* [Code](https://github.com/LabOfOz/SeeClarke)
+* [Npm Package](https://www.npmjs.com/package)

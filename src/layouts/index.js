@@ -10,6 +10,7 @@ import Sidebar from '../components/sidebar'
 import Logo from '../media/svgs/aiji-logo.svg'
 
 import './index.css'
+import '../media/icons/style.css'
 import BgPattern from '../media/bg_pattern.png'
 
 // Syntax Highlighting

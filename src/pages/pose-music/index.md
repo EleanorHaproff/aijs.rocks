@@ -1,5 +1,8 @@
 ---
 title: "Pose Music"
+demo:
+code:
+link:
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/pose-music"
 thumbnail: "./img/pose-music.png"
@@ -16,4 +19,4 @@ layout: "inspire"
 
 ![Animation](./img/pose-music.png)
 
-- [Demo](https://codepen.io/teropa/full/QxLrMp/)
+* [Demo](https://codepen.io/teropa/full/QxLrMp/)

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 import Headroom from 'react-headroom'
 
 import Logo from '../media/svgs/aiji-logo.svg'
@@ -17,17 +17,17 @@ const HeaderWrapper = styled.div`
     height: 40px;
     margin: 0;
   }
-  i{
-    font-size:16px;
+  i {
+    font-size: 16px;
     cursor: pointer;
   }
 `
 const MenuWrapper = styled.div`
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  background:white;
-  text-align:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  text-align: center;
   position: fixed;
   max-width: 100%;
   width: 100%;
@@ -35,34 +35,39 @@ const MenuWrapper = styled.div`
   overflow-y: auto;
   z-index: 10000;
   top: 0;
-  padding:16px;
-  opacity:0;
+  padding: 16px;
+  opacity: 0;
   transform: translate3d(0, -110vh, 0);
-  transition: all .3s ease-in-out;
-  ${props => props.opened && css`
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  `}
+  transition: all 0.3s ease-in-out;
+  ${props =>
+    props.opened &&
+    css`
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    `};
 `
 const CloseIcon = styled.span`
   font-size: 16px;
-  text-align:right;
+  text-align: right;
   cursor: pointer;
 `
 const Menu = styled.ul`
   list-style: none;
-  font-size:16px;
-  font-weight:bold;
-  line-height:64px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 64px;
 `
 const SocialMedia = styled.ul`
   list-style: none;
-  font-size:22px;
-  display:flex;
-  justify-content:center;
-  li{
-    margin:0 8px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  li {
+    margin: 0 8px;
   }
+`
+const MenuIcon = styled.span`
+  font-size: 22px;
 `
 class HeaderResponsive extends Component {
   constructor() {
@@ -81,24 +86,61 @@ class HeaderResponsive extends Component {
         <Headroom>
           <HeaderWrapper>
             <img src={Logo} alt="aiji-logo" />
-            <i onClick={this.toggleMenu} className="icon-menu" />
+            <MenuIcon onClick={this.toggleMenu} className="icon-menu">
+              <span className="path1" />
+              <span className="path2" />
+              <span className="path3" />
+              <span className="path4" />
+            </MenuIcon>
           </HeaderWrapper>
         </Headroom>
-          <MenuWrapper opened={this.state.menuOpened}>
-            <div style={{textAlign:'right'}}>
-              <CloseIcon onClick={this.toggleMenu}>✖</CloseIcon>
-            </div>
-            <Menu>
-              <li>About</li>
-              <li>Inspire</li>
-              <li>Submit</li>
-            </Menu>
-            <SocialMedia>
-              <li><a href="//twitter.com"><i className="icon-twitter" /></a></li>
-              <li><a href="//github.com"><i className="icon-github" /></a></li>
-            </SocialMedia>
-            <p>Built by <Link to="/">El</Link>, <Link to="/">Asim</Link>, <Link to="/">Osama</Link>  -  hosted on <Link to="/">Azure</Link></p>
-          </MenuWrapper>
+        <MenuWrapper opened={this.state.menuOpened}>
+          <div style={{ textAlign: 'right' }}>
+            <CloseIcon onClick={this.toggleMenu}>✖</CloseIcon>
+          </div>
+          <Menu>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/">Inspire</Link>
+            </li>
+            <li>
+              <Link to="/submit">Submit</Link>
+            </li>
+          </Menu>
+          <SocialMedia>
+            <li>
+              <a href="//twitter.com">
+                <i className="icon-twitter" />
+              </a>
+            </li>
+            <li>
+              <a href="//github.com">
+                <i className="icon-github" />
+              </a>
+            </li>
+          </SocialMedia>
+          <p>
+            Built by{' '}
+            <a target="_blank" href="https://twitter.com/EleanorHaproff">
+              Elle
+            </a>,{' '}
+            <a target="_blank" href="https://twitter.com/jawache">
+              Asim
+            </a>,{' '}
+            <a target="_blank" href="https://twitter.com/osama_jandali">
+              Osama
+            </a>{' '}
+            - hosted on{' '}
+            <a
+              target="_blank"
+              href="https://azure.microsoft.com/free/search/?WT.mc_id=aijsrocks-site-ashussai"
+            >
+              Azure
+            </a>
+          </p>
+        </MenuWrapper>
       </div>
     )
   }

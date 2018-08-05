@@ -1,15 +1,19 @@
 ---
 title: "The Mojifier"
+demo: https://github.com/jawache/mojifier
+code: https://github.com/jawache/mojifier
+link: https://github.com/jawache/mojifier
 date: "2018-04-01T17:12:33.962Z"
 path: "/inspire/mojifier"
 thumbnail: "./img/example-face.jpg"
-author: "Asim Hussain"
-authorAvatar: "https://pbs.twimg.com/profile_images/833970306339446784/83MO53R9_400x400.jpg"
 shortDescription: "TheMojifier is a Twitter bot which replaces peoples faces in images with emojis matching their emotion"
 tags:
     - API
     - Azure Face API
-builtBy: "Asim Hussain"
+author: "Asim Hussain"
+authorAvatar: "https://pbs.twimg.com/profile_images/833970306339446784/83MO53R9_400x400.jpg"
+authorLink: "https://twitter.com/jawache"
+
 layout: "inspire"
 ---
 
@@ -40,7 +44,7 @@ In this article I’m going to explain how TheMojifier was made and show you how
 All the code for Mojifier is available on [GitHub](https://github.com/jawache/mojifier), and you can follow TheMojifier ™ on Twitter at [@mojifier](https://twitter.com/mojifier).
 
 > **Note**
-> 
+>
 > I’d like to thank [Osama Jandali](https://twitter.com/osama_jandali) for creating the logo and all the artwork 😀 for TheMojifer as well as helping out with coding the Azure Functions.
 
 # Requirements
@@ -59,7 +63,7 @@ Azure Cognitive Services are a set of high-level APIs you can use to add advance
 
 ## Azure Logic Apps
 
-This service enables you to create complex business logic for your app without writing any code by using a *visual designer*. It comes with a rich library of connectors like twitter and slack as well as a limited set of control flow statements such as `if`, `switch` etc…Think of it as a more expressive and customisable version of Zapier or IFTT
+This service enables you to create complex business logic for your app without writing any code by using a _visual designer_. It comes with a rich library of connectors like twitter and slack as well as a limited set of control flow statements such as `if`, `switch` etc…Think of it as a more expressive and customisable version of Zapier or IFTT
 
 [More info](https://azure.microsoft.com/services/logic-apps/&WT.mc_id=mojifier-sandbox-ashussai)
 
@@ -89,7 +93,7 @@ Calculating emotion is one of the easiest parts of the application. We use the [
 
 The FaceAPI takes as input an image and returns information about the image, including if it detected any faces, the locations of the faces in the image and if requested it will also calculate and return the emotions of the faces as well, like so:
 
-``` json
+```json
 {
   "anger": 0.572,
   "contempt": 0.025,
@@ -112,14 +116,14 @@ To process this image, you would make a POST request to an API endpoint like thi
 
 We provide the image in the body like so:
 
-``` json
+```json
 {
- "url": "<path-to-image>"
+  "url": "<path-to-image>"
 }
 ```
 
 > **Note**
-> 
+>
 > The API by default doesn’t return the emotion, you need to explicitly specify the query param `returnFaceAttributes=emotion`
 
 The API is authenticated by the use of a secret key; we need to send this key with the header
@@ -128,7 +132,7 @@ The API is authenticated by the use of a secret key; we need to send this key wi
 
 The API with the query params above would return a JSON like so:
 
-``` json
+```json
 [
   {
     "faceRectangle": {
@@ -156,12 +160,12 @@ The API with the query params above would return a JSON like so:
 It returns an array of results, one per face detected in the image. For each face, it returns the size/location of the face as `faceRectangle` and the emotions represented as a number from 0 to 1 as `faceAttributes`.
 
 > **Tip**
-> 
-> You can start playing around with Cognitive Services even *without* having an Azure account, simply go to [this page](https://azure.microsoft.com/try/cognitive-services/?api=face-api&WT.mc_id=mojifier-sandbox-ashussai) and enter your email address to get trial access.
+>
+> You can start playing around with Cognitive Services even _without_ having an Azure account, simply go to [this page](https://azure.microsoft.com/try/cognitive-services/?api=face-api&WT.mc_id=mojifier-sandbox-ashussai) and enter your email address to get trial access.
 
 ## How to map an emotion to an emoji?
 
-Imagine there were only two emotions, fear and happiness, with values ranging from 0 to 1. Then every face could be plotted in a 2D *emotional space* based on the emotion of the user, like so:
+Imagine there were only two emotions, fear and happiness, with values ranging from 0 to 1. Then every face could be plotted in a 2D _emotional space_ based on the emotion of the user, like so:
 
 ![Euclidean Distance 1](./img/graph-1.jpg)
 
@@ -172,14 +176,14 @@ Imagine then that we also figured out the emotional point for each emoji, and pl
 This calculation is called the `euclidian distance`, and this is precisely what we used but not in 2D emotional space, in an 8D emotional space with (anger, contempt, disgust, fear, happiness, neutral, sadness, surprise).
 
 > **Tip**
-> 
+>
 > To make like easier we used the npm package called euclidean-distance, <https://www.npmjs.com/package/euclidean-distance>.
 
 ## How to calculate the emotional point for all the emojis?
 
 We can’t pass an image of the emoji to the emotion API to get it’s emotion because, well because it’s not human. So for each emoji, I needed a human proxy, me.
 
-I took pictures of myself *accurately* mimicking each emoji, and used the *emotional point* for that image as the proxy for the emoji. To keep things interesting I also chose people from my team and associated them with emojis as well, like so:
+I took pictures of myself _accurately_ mimicking each emoji, and used the _emotional point_ for that image as the proxy for the emoji. To keep things interesting I also chose people from my team and associated them with emojis as well, like so:
 
 ![Team Moji](./img/team.jpg)
 
@@ -203,31 +207,31 @@ The full source code for this feature can be found in the function `createMojifi
 
 In the function, we load the source image into Jimp like so
 
-``` javascript
+```javascript
 Jimp.read(imageUrl).then(sourceImage => { ... });
 ```
 
 We later on load the image of the emoji like so:
 
-``` javascript
+```javascript
 Jimp.read(mojiPath).then(emojiImage => { ... });
 ```
 
 We then resize the emoji so it will fit the size of this persons’ face, like so:
 
-``` javascript
-emojiImage.resize(faceWidth, faceHeight);
+```javascript
+emojiImage.resize(faceWidth, faceHeight)
 ```
 
-Then we *composite* the `emojiImage` over the `sourceImage` at the right location (the face), like so:
+Then we _composite_ the `emojiImage` over the `sourceImage` at the right location (the face), like so:
 
-``` javascript
-sourceImage.composite(emojiImage, faceLeft, faceTop);
+```javascript
+sourceImage.composite(emojiImage, faceLeft, faceTop)
 ```
 
 Then finally we get the `buffer` of the jpeg of the composited image which we can use to post to twitter, like so:
 
-``` javascript
+```javascript
 .getBuffer(Jimp.MIME_JPEG, (error, buffer) => { ... });
 ```
 
@@ -257,23 +261,23 @@ With Logic Apps we can pass **outputs** from past steps as **inputs** in future 
 
 ## Error Handling
 
-By default, if *any* step in the flow errors out then the rest of the steps are skipped. In the `IsUserThrottled` function returning an HTTP error status code will trigger the step to error out the rest of the steps to be skipped.
+By default, if _any_ step in the flow errors out then the rest of the steps are skipped. In the `IsUserThrottled` function returning an HTTP error status code will trigger the step to error out the rest of the steps to be skipped.
 
 > **Warning**
-> 
+>
 > Returning a 429 status code, which means the request timed out, will cause Logic Apps to try to auto-retry the request. That’s not the functionality we want, we want the flow to exit, so we return a 400 if the user is throttled or a 200 if they are not throttled.
 
 ## Using Authenticated calls with Azure Functions
 
 Http triggered Azure Functions can be configured to work with three different auth levels.
 
-  - `anonymous` is the easiest to setup and means the function is essentially open to the world, *anyone* can trigger it.
+* `anonymous` is the easiest to setup and means the function is essentially open to the world, _anyone_ can trigger it.
 
-  - `function` means that only people who pass in a secret auth key can trigger it.
+* `function` means that only people who pass in a secret auth key can trigger it.
 
-  - `admin` means that only admins can trigger it.
+* `admin` means that only admins can trigger it.
 
-We don’t want to make our Azure Functions open to the world, so we secure them with the `function` level auth. This would *normally* mean that to trigger the function you’d have to pass in an auth key in the request, usually in the header.
+We don’t want to make our Azure Functions open to the world, so we secure them with the `function` level auth. This would _normally_ mean that to trigger the function you’d have to pass in an auth key in the request, usually in the header.
 
 However since Azure Functions are first class citizens of Logic Apps, the Logic App platform takes care of that for us. We can add in the Azure Function as a connector, and the Logic App detects it requires function level auth, extracts the auth key from the Azure Function app and pass it through for us.
 
@@ -281,7 +285,7 @@ However since Azure Functions are first class citizens of Logic Apps, the Logic 
 
 ![GetImageToMojify](./img/logic-app-getimage.png)
 
-The twitter connector does provide as one of its outputs the URL of any image in the tweet. But remember we don’t want the image in the tweet; we want the image in the tweet this tweet is in *reply* to.
+The twitter connector does provide as one of its outputs the URL of any image in the tweet. But remember we don’t want the image in the tweet; we want the image in the tweet this tweet is in _reply_ to.
 
 This Azure function finds the right image to mojify. It first checks the current tweet, the one with the tag `#mojify`, to see if that has an image if so it returns that. Failing that it checks to see the parent tweet to see if that has an image and returns that. If it can’t find any images, it returns a 400, which errors out the flow and skips all the future steps.
 
@@ -335,7 +339,7 @@ The above configuration results in the below message posted in slack.
 
 ![ReplyWithMojifedImage](./img/logic-app-error-1.png)
 
-This is slightly more complex since *any* step in the flow can error out or be skipped.
+This is slightly more complex since _any_ step in the flow can error out or be skipped.
 
 But there is an easy way to handle this kind of issue in Logic Apps with the use of **scopes**.
 
@@ -344,7 +348,7 @@ By wrapping a set of steps in a scope, I’ve called ours `main`, when any of th
 We can use that with the **run after** config to trigger a step if any of the previous steps have failed.
 
 > **Tip**
-> 
+>
 > I’ve created two scopes in this app, `main` and `on error`. You can configure either a step or a scope to **run after** previous steps or scopes.
 
 ![ReplyWithMojifedImage](./img/logic-app-error-2.png)
@@ -359,39 +363,39 @@ I’ve set this up to post another message to another slack channel if any of th
 
 Our application, specifically the Azure Functions in our app, need some configuration to run.
 
-  - `IsUserThrottled` needs to know the connection string for the Redis instance.
+* `IsUserThrottled` needs to know the connection string for the Redis instance.
 
-  - `GetImageToMojify` & `ReplyWithMojifiedImage` both need to know the twitter credentials since they call the Twitter API.
+* `GetImageToMojify` & `ReplyWithMojifiedImage` both need to know the twitter credentials since they call the Twitter API.
 
 We used environment variables to hold sensitive data like that, on localhost we can use one set of environment variables and once deployed we can use another.
 
 In code, we grab the configuration from the environment using code like:
 
-``` ts
-process.env["TWITTER_CONSUMER_KEY"];
+```ts
+process.env['TWITTER_CONSUMER_KEY']
 ```
 
 When developing with Azure Functions locally, we use the `local.settings.json` configuration file to define the environment variables for us.
 
 > **Note**
-> 
+>
 > This file isn’t checked in, we use it to set properties which should only be used locally.
 
 Azure Functions will populate `process.env` with the contents of the `Values` property of the JSON file when running locally.
 
-``` json
+```json
 {
   "Values": { "<KEY>": "<VALUE>" }
 }
 ```
 
 > **Note**
-> 
+>
 > An important caveat here is that the environment variables are **only set by the time the index function is called** not when the script is parsed.
 
-This means you cannot simply use `process.env["TWITTER_CONSUMER_KEY"];` *anywhere* in your file, process.env will only be guaranteed to be set when calling the `index` function, like so:
+This means you cannot simply use `process.env["TWITTER_CONSUMER_KEY"];` _anywhere_ in your file, process.env will only be guaranteed to be set when calling the `index` function, like so:
 
-``` javascript
+```javascript
 export async function index(context, req) {
     // Envrionment variables only setup by this point
     process.env["..."];
@@ -402,7 +406,7 @@ To configure the environment variables in production, we need to head to our Azu
 
 This manual effort can be tedious so to speed things up we can also publish the environment variables in local settings up to production using the [Azure Function CLI tool](https://github.com/Azure/azure-functions-core-tools) and this command line:
 
-``` bash
+```bash
 func azure functionapp publish <my-function-app-name> --publish-settings-only
 ```
 
@@ -416,6 +420,6 @@ For next steps I recommend for you to play around with the project on GitHub, fe
 
 Also try out these quickstarts on Azure for Logic Apps and Functions:
 
-  - [Logic Apps Quickstart](https://docs.microsoft.com/azure/logic-apps/quickstart-create-first-logic-app-workflow?WT.mc_id=mojifier-sandbox-ashussai)
+* [Logic Apps Quickstart](https://docs.microsoft.com/azure/logic-apps/quickstart-create-first-logic-app-workflow?WT.mc_id=mojifier-sandbox-ashussai)
 
-  - [Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function?WT.mc_id=mojifier-sandbox-ashussai)
+* [Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function?WT.mc_id=mojifier-sandbox-ashussai)
