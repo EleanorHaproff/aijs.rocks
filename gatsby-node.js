@@ -21,6 +21,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               date
               demo
               code
+              link
               path
               title
               author

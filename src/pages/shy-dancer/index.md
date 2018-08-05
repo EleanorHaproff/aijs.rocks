@@ -2,7 +2,7 @@
 title: "Shy Dancer"
 demo:
 code:
-source:
+link:
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/shy-dancer"
 thumbnail: "./img/shy-dancer.png"

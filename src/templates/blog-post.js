@@ -111,6 +111,7 @@ export const pageQuery = graphql`
         title
         demo
         code
+        link
         date(formatString: "MMMM DD, YYYY")
         path
         author

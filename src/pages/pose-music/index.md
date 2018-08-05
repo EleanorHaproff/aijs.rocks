@@ -2,7 +2,7 @@
 title: "Pose Music"
 demo:
 code:
-source:
+link:
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/pose-music"
 thumbnail: "./img/pose-music.png"

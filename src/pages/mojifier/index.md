@@ -2,7 +2,7 @@
 title: "The Mojifier"
 demo: https://github.com/jawache/mojifier
 code: https://github.com/jawache/mojifier
-poo: 
+link: https://github.com/jawache/mojifier
 date: "2018-04-01T17:12:33.962Z"
 path: "/inspire/mojifier"
 thumbnail: "./img/example-face.jpg"

@@ -2,7 +2,7 @@
 title: "SeeClarke.js"
 demo:
 code:
-source:
+link:
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/see-clarke"
 thumbnail: "./img/see-clarke.png"
