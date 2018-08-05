@@ -54,7 +54,7 @@ export const BuiltBy = styled.h6`
 export const BuilderWrapper = styled.div`
   margin: 8px 0;
 `
-export const AuthorWrapper = styled.p`
+export const AuthorWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,6 +69,7 @@ export const AuthorWrapper = styled.p`
     border-radius: 8px;
     margin-bottom: 0;
   }
+  margin-bottom: 1.55rem;
 `
 export const SocialLogo = styled.span`
   font-size: 16px;
