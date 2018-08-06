@@ -100,23 +100,37 @@ class HeaderResponsive extends Component {
           </div>
           <Menu>
             <li>
-              <Link to="/about">About</Link>
+              <Link onClick={this.toggleMenu} to="/about">
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/">Inspire</Link>
+              <Link onClick={this.toggleMenu} to="/">
+                Inspire
+              </Link>
             </li>
             <li>
-              <Link to="/submit">Submit</Link>
+              <Link onClick={this.toggleMenu} to="/submit">
+                Submit
+              </Link>
             </li>
           </Menu>
           <SocialMedia>
             <li>
-              <a href="//twitter.com">
+              <a
+                onClick={this.toggleMenu}
+                href="//twitter.com/AiJavaScript"
+                target="_blank"
+              >
                 <i className="icon-twitter" />
               </a>
             </li>
             <li>
-              <a href="//github.com">
+              <a
+                onClick={this.toggleMenu}
+                href="//github.com/aijavascript/aijs.rocks"
+                target="_blank"
+              >
                 <i className="icon-github" />
               </a>
             </li>
