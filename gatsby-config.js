@@ -3,8 +3,16 @@ module.exports = {
     title: `aijs.rocks`,
   },
   plugins: [
-    `gatsby-plugin-typography`,
-    `gatsby-plugin-styled-components`,
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: { omitGoogleFont: true },
+    // },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-catch-links`,
@@ -16,22 +24,20 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
-  {
-    resolve: `gatsby-transformer-remark`,
-    options: {
-      plugins: [
-        `gatsby-remark-prismjs`,
-        {
-          resolve: `gatsby-remark-images`,
-          options: {
-            maxWidth: 590,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
           },
-        },
-        "gatsby-remark-copy-linked-files"
-      ],
+          'gatsby-remark-copy-linked-files',
+        ],
+      },
     },
-  },
   ],
-
-
 }
