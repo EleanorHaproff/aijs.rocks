@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Typography from 'typography'
+// import Typography from 'typography'
 import styled from 'styled-components'
 
 import Header from '../components/header'
@@ -14,18 +14,21 @@ import '../media/icons/style.css'
 import BgPattern from '../media/bg_pattern.png'
 
 // Syntax Highlighting
-require("prismjs/themes/prism-tomorrow.css");
+require('prismjs/themes/prism-tomorrow.css')
 import './prism.css'
 
 // Customize Typography Plugin
-const typography = new Typography({
-  baseFontSize: '14px',
-  baseLineHeight: 1.55,
-  headerFontFamily: ["Space Mono", "monospace"],
-  bodyFontFamily: ["Space Mono", "monospace"],
-})
+// const typography = new Typography({
+//   baseFontSize: '16px',
+//   baseLineHeight: 1.55,
+//   headerFontFamily: ['Space Mono', 'monospace'],
+//   bodyFontFamily: ['Space Mono', 'monospace'],
+// })
+// typography.toString()
 // var css = typography.toString()
-typography.injectStyles()
+// typography.injectStyles()
+import './typography.css'
+
 const AppWrapper = styled.div`
   display:flex;
   background-image:url('${BgPattern}');
@@ -68,7 +71,11 @@ class Layout extends Component {
         <Helmet
           title={this.props.data.site.siteMetadata.title}
           meta={[
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Space+Mono:400,700' },
+            {
+              rel: 'stylesheet',
+              href:
+                'https://fonts.googleapis.com/css?family=Space+Mono:400,700',
+            },
             {
               name: 'description',
               content:
