@@ -1,5 +1,8 @@
 ---
 title: "SeeClarke.js"
+demo: https://codepen.io/collection/nryEYd/
+code: https://github.com/LabOfOz/SeeClarke.js
+link: https://www.npmjs.com/package/seeclarke
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/see-clarke"
 thumbnail: "./img/see-clarke.png"

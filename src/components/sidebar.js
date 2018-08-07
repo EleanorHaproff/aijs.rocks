@@ -9,17 +9,17 @@ import { pageQuery } from '../pages/index'
 
 //* Styles */
 const SidebarWrapper = styled.div`
-  width:140px;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  align-items:center;
-  padding:40px;
-  text-align:center;
-  color:#FDCB25;
-  position:fixed;
-  left:0;
+  width: 140px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  color: #fdcb25;
+  position: fixed;
+  left: 0;
 `
 const LogoImg = styled.img`
   width: 76px;
@@ -70,7 +70,9 @@ const FooterImg = styled.img`
 const Sidebar = () => (
   <SidebarWrapper>
     <div>
-      <LogoImg src={Logo} alt="aiji-logo" />
+      <Link to="/">
+        <LogoImg src={Logo} alt="aiji-logo" />
+      </Link>
       {/* Will be added later..
       <h4 style={{marginBottom: 8, textAlign:'left'}}>Popular Tags</h4>
       <Hr/>
@@ -86,8 +88,23 @@ const Sidebar = () => (
     <FooterWrapper>
       <FooterImg src={FooterIcon} alt="footer-icon" />
       <p>
-        Built by <Link to="/">El</Link>, <Link to="/">Asim</Link>,{' '}
-        <Link to="/">Osama</Link> - hosted on <Link to="/">Azure</Link>
+        Built by{' '}
+        <a target="_blank" href="https://twitter.com/EleanorHaproff">
+          Elle
+        </a>,{' '}
+        <a target="_blank" href="https://twitter.com/jawache">
+          Asim
+        </a>,{' '}
+        <a target="_blank" href="https://twitter.com/osama_jandali">
+          Osama
+        </a>{' '}
+        - hosted on{' '}
+        <a
+          target="_blank"
+          href="https://azure.microsoft.com/free/search/?WT.mc_id=aijsrocks-site-ashussai"
+        >
+          Azure
+        </a>
       </p>
     </FooterWrapper>
   </SidebarWrapper>

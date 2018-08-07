@@ -1,5 +1,8 @@
 ---
 title: "TensorFlow.js Regression"
+demo:
+code:
+link:
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/tensorflow-regression"
 thumbnail: "./img/tensorflowjsregression.png"
@@ -15,5 +18,5 @@ layout: "inspire"
 
 ![Animation](./img/tensorflowjsregression.gif)
 
-- [Demo](https://ck090.github.io/tensorflowregression/)
-- [Code](https://github.com/ck090/tensorflowregression) 
+* [Demo](https://ck090.github.io/tensorflowregression/)
+* [Code](https://github.com/ck090/tensorflowregression)

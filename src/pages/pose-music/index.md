@@ -1,5 +1,8 @@
 ---
 title: "Pose Music"
+demo: https://codepen.io/teropa/full/QxLrMp/
+code: https://codepen.io/teropa/full/QxLrMp/
+link: https://codepen.io/teropa/full/QxLrMp/
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/pose-music"
 thumbnail: "./img/pose-music.png"
@@ -21,3 +24,5 @@ This project accesses your webcam, then plays a continuous loop of music which c
 Check out the [Demo](https://codepen.io/teropa/full/QxLrMp/) over on CodePen and see if you can change the frequency of this musical loop by moving your arms.
 
 It was built by [Tero Parviainen](https://teropa.info/)
+
+* [Demo](https://codepen.io/teropa/full/QxLrMp/)

@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./icomoon.eot?kg08h1');
+  src:  url('./icomoon.eot?kg08h1#iefix') format('embedded-opentype'),
+    url('./icomoon.ttf?kg08h1') format('truetype'),
+    url('./icomoon.woff?kg08h1') format('woff'),
+    url('./icomoon.svg?kg08h1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e900";
+}
+.icon-app .path1:before {
+  content: "\e901";
+  color: rgb(35, 37, 55);
+}
+.icon-app .path2:before {
+  content: "\e902";
+  margin-left: -0.9892578125em;
+  color: rgb(253, 203, 37);
+}
+.icon-code .path1:before {
+  content: "\e903";
+  color: rgb(35, 37, 55);
+}
+.icon-code .path2:before {
+  content: "\e904";
+  margin-left: -0.9892578125em;
+  color: rgb(253, 203, 37);
+}
+.icon-code .path3:before {
+  content: "\e905";
+  margin-left: -0.9892578125em;
+  color: rgb(253, 203, 37);
+}
+.icon-code .path4:before {
+  content: "\e906";
+  margin-left: -0.9892578125em;
+  color: rgb(253, 203, 37);
+}
+.icon-info .path1:before {
+  content: "\e907";
+  color: rgb(35, 37, 55);
+}
+.icon-info .path2:before {
+  content: "\e908";
+  margin-left: -0.9892578125em;
+  color: rgb(253, 203, 37);
+}
+.icon-link .path1:before {
+  content: "\e909";
+  color: rgb(35, 37, 55);
+}
+.icon-link .path2:before {
+  content: "\e90a";
+  margin-left: -0.9892578125em;
+  color: rgb(253, 203, 37);
+}
+.icon-link .path3:before {
+  content: "\e90b";
+  margin-left: -0.9892578125em;
+  color: rgb(253, 203, 37);
+}
+.icon-menu .path1:before {
+  content: "\e90c";
+  color: rgb(35, 37, 55);
+}
+.icon-menu .path2:before {
+  content: "\e90d";
+  margin-left: -0.9892578125em;
+  color: rgb(253, 203, 37);
+}
+.icon-menu .path3:before {
+  content: "\e90e";
+  margin-left: -0.9892578125em;
+  color: rgb(253, 203, 37);
+}
+.icon-menu .path4:before {
+  content: "\e90f";
+  margin-left: -0.9892578125em;
+  color: rgb(253, 203, 37);
+}
+.icon-clock:before {
+  content: "\e94e";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}

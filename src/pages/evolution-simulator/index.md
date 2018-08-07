@@ -1,5 +1,8 @@
 ---
 title: "Evolution Simulator"
+demo:
+code:
+source: 
 date: "2018-07-28T17:12:33.962Z"
 path: "/inspire/evolution-simulator"
 thumbnail: "./img/evolution-simulator.png"
@@ -40,5 +43,5 @@ This project is based on [Neuroevolution](https://en.wikipedia.org/wiki/Neuroevo
 a form of artificial intelligence that uses evolutionary algorithms to
 generate artificial neural networks (ANN), parameters, topology and rules.
 
-- [Demo](https://adityathebe.github.io/evolutionSimulator/)
-- [Code](https://github.com/adityathebe/evolutionSimulator)
+* [Demo](https://adityathebe.github.io/evolutionSimulator/)
+* [Code](https://github.com/adityathebe/evolutionSimulator)
