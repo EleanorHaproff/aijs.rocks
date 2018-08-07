@@ -16,4 +16,8 @@ layout: "inspire"
 
 ![Animation](./img/pose-music.png)
 
-- [Demo](https://codepen.io/teropa/full/QxLrMp/)
+This project accesses your webcam, then plays a continuous loop of music which changes pitches based on how high or low your arms are.
+
+Check out the [Demo](https://codepen.io/teropa/full/QxLrMp/) over on CodePen and see if you can change the frequency of this musical loop by moving your arms.
+
+It was built by [Tero Parviainen](https://teropa.info/)
