@@ -1,0 +1,57 @@
+$primary-color: #47bbdd;
+$secondary-color: #fdcb25;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+span {
+  color: #232537;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.menu {
+  font-size: 14px;
+  a {
+    color: $secondary-color;
+  }
+}
+
+blockquote {
+  border: 2px solid #232537;
+  background: #f7f9fc;
+  border-radius: 8px;
+  p {
+    &:first-child {
+      margin-bottom: 8px;
+      strong {
+        background: #232537;
+        color: #49e1c2;
+        padding: 3px 16px;
+        border-radius: 6px 0 8px 0;
+      }
+    }
+    &:last-child {
+      padding: 0 8px 8px 8px;
+    }
+  }
+}
+
+/*Overwrite react tooltip style*/
+
+.__react_component_tooltip.type-dark {
+  background-color: #232537;
+  color: #fdcb25;
+  &.place-bottom:after {
+    border-bottom-color: #232537;
+  }
+}

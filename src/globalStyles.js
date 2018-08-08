@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 
+const primaryColor = '#47bbdd'
+const secondaryColor = '#fdcb25'
+
 export const Tag = styled.li`
   text-align: left;
   padding: 5px 10px;

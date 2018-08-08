@@ -7,13 +7,13 @@ module.exports = {
     //   resolve: `gatsby-plugin-typography`,
     //   options: { omitGoogleFont: true },
     // },
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: true,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-catch-links`,
     {
@@ -33,11 +33,13 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
+              wrapperStyle: 'text-align: center;',
             },
           },
           'gatsby-remark-copy-linked-files',
         ],
       },
     },
+    `gatsby-plugin-react-helmet`,
   ],
 }

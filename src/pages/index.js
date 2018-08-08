@@ -109,7 +109,7 @@ export default function Index({ data }) {
                   </p>
                 </Description>
                 <TagsWrapper>
-                  {post.frontmatter.tags.map(tag => (
+                  {post.frontmatter.tags.slice(0, 3).map(tag => (
                     <Tag key={tag} style={{ marginRight: 8 }}>
                       {tag}
                     </Tag>
