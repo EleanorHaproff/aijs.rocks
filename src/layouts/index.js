@@ -9,7 +9,7 @@ import HeaderResponsive from '../components/header-responsive'
 import Sidebar from '../components/sidebar'
 import Logo from '../media/svgs/aiji-logo.svg'
 
-import './index.css'
+import './index.scss'
 import '../media/icons/style.css'
 import BgPattern from '../media/bg_pattern.png'
 
@@ -27,6 +27,8 @@ import './prism.css'
 // typography.toString()
 // var css = typography.toString()
 // typography.injectStyles()
+
+//TODO figure some way to turn this into a conditional import
 import './typography.css'
 
 const AppWrapper = styled.div`

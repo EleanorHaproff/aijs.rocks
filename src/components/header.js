@@ -4,17 +4,17 @@ import styled from 'styled-components'
 
 //* Styles */
 const HeaderWrapper = styled.div`
-  background:#232537;
-  max-width:140px;
-  height:100vh;
-  padding:40px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  text-align:center;
-  color:#FDCB25;
-  position:fixed;
-  right:0;
+  background: #232537;
+  max-width: 140px;
+  height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  color: #fdcb25;
+  position: fixed;
+  right: 0;
 `
 const MenuList = styled.ul`
   margin: 0;
@@ -43,31 +43,33 @@ const MenuLi = styled.li`
 `
 
 const Header = () => (
-  <HeaderWrapper>
-    <MenuList style={{ textAlign: 'right' }}>
-      <MenuLi>
-        <Link to="/about">About</Link>
-      </MenuLi>
-      <MenuLi>
-        <Link to="/">Inspire</Link>
-      </MenuLi>
-      <MenuLi>
-        <Link to="/submit">Submit</Link>
-      </MenuLi>
-    </MenuList>
-    <MenuList>
-      <li>
-        <a href="//twitter.com/AiJavaScript" target="_blank" >
-          <i className="icon-twitter" />
-        </a>
-      </li>
-      <li>
-        <a href="//github.com/aijavascript/aijs.rocks" target="_blank" >
-          <i className="icon-github" />
-        </a>
-      </li>
-    </MenuList>
-  </HeaderWrapper>
+  <div className="menu menu-desktop">
+    <HeaderWrapper>
+      <MenuList style={{ textAlign: 'right' }}>
+        <MenuLi>
+          <Link to="/about">About</Link>
+        </MenuLi>
+        <MenuLi>
+          <Link to="/">Inspire</Link>
+        </MenuLi>
+        <MenuLi>
+          <Link to="/submit">Submit</Link>
+        </MenuLi>
+      </MenuList>
+      <MenuList>
+        <li>
+          <a href="//twitter.com/AiJavaScript" target="_blank">
+            <i className="icon-twitter" />
+          </a>
+        </li>
+        <li>
+          <a href="//github.com/aijavascript/aijs.rocks" target="_blank">
+            <i className="icon-github" />
+          </a>
+        </li>
+      </MenuList>
+    </HeaderWrapper>
+  </div>
 )
 
 export default Header

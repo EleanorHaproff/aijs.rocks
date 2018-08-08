@@ -7,6 +7,7 @@ module.exports = {
     //   resolve: `gatsby-plugin-typography`,
     //   options: { omitGoogleFont: true },
     // },
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {

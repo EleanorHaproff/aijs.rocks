@@ -82,7 +82,7 @@ class HeaderResponsive extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="menu menu-mobile">
         <Headroom>
           <HeaderWrapper>
             <img src={Logo} alt="aiji-logo" />
