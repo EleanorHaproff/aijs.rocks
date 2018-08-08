@@ -1,8 +1,8 @@
 ---
 title: "The Mojifier"
-demo: https://github.com/jawache/mojifier
+demo: https://twitter.com/mojifier
 code: https://github.com/jawache/mojifier
-link: https://github.com/jawache/mojifier
+link: 
 date: "2018-04-01T17:12:33.962Z"
 path: "/inspire/mojifier"
 thumbnail: "./img/example-face.jpg"

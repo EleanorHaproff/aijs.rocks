@@ -17,4 +17,4 @@ layout: "inspire"
 
 ![Animation](./img/shy-dancer.png)
 
-- [Demo](https://codepen.io/cassie-codes/pen/jKaVqo/)
+* [Demo](https://codepen.io/cassie-codes/pen/jKaVqo/)

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `aijs.rocks`,
+    title: `aijs.rocks`
   },
   plugins: [
     // {
@@ -11,8 +11,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: true,
-      },
+        displayName: true
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-catch-links`,
@@ -20,8 +20,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        name: "pages"
+      }
     },
     `gatsby-plugin-sharp`,
     {
@@ -33,13 +33,14 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
-              wrapperStyle: 'text-align: center;',
-            },
+              wrapperStyle: "text-align: center;"
+            }
           },
-          'gatsby-remark-copy-linked-files',
-        ],
-      },
+          "gatsby-remark-copy-linked-files"
+        ]
+      }
     },
     `gatsby-plugin-react-helmet`,
-  ],
-}
+    `gatsby-plugin-twitter`
+  ]
+};
