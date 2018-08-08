@@ -7,7 +7,8 @@ import styled from 'styled-components'
 import Header from '../components/header'
 import HeaderResponsive from '../components/header-responsive'
 import Sidebar from '../components/sidebar'
-import Logo from '../media/svgs/aiji-logo.svg'
+import Logo from '../media/aijs-logo.png'
+import Favicon from '../media/favicons/favicon.ico'
 
 import './index.scss'
 import '../media/icons/style.css'
@@ -99,8 +100,12 @@ class Layout extends Component {
               content:
                 'A curated collection of inspirational AI-powered JavaScript apps. Find examples of artificial intelligence and machine learning with Javascript',
             },
-            { property: 'og:image', content: Logo },
+            { property: 'og:image', content: `${Logo}` },
             { property: 'og:url', content: 'https://aijs.rocks/' },
+            { property: 'theme-color', content: '#fdcb25' },
+          ]}
+          link={[
+            { rel: 'shortcut icon', type: 'image/png', href: `${Favicon}` },
           ]}
         />
         <ContentWrapper>{this.props.children()}</ContentWrapper>

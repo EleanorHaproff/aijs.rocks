@@ -32,7 +32,11 @@ export default function Template({ data }) {
             property: 'og:description',
             content: post.frontmatter.shortDescription,
           },
-          { property: 'og:image', content: post.frontmatter.thumbnail },
+          {
+            property: 'og:image',
+            content:
+              post.frontmatter.thumbnail.childImageSharp.responsiveSizes.src,
+          },
           { property: 'og:url', content: post.frontmatter.path },
           { property: 'og:type', content: 'article' },
         ]}
@@ -119,6 +123,13 @@ export const pageQuery = graphql`
         authorLink
         shortDescription
         tags
+        thumbnail {
+          childImageSharp {
+            responsiveSizes(maxWidth: 1024) {
+              src
+            }
+          }
+        }
       }
     }
   }
