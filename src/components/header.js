@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
+import React from "react";
+import Link from "gatsby-link";
+import styled from "styled-components";
 
 //* Styles */
 const HeaderWrapper = styled.div`
@@ -15,18 +15,18 @@ const HeaderWrapper = styled.div`
   color: #fdcb25;
   position: fixed;
   right: 0;
-`
+`;
 const MenuList = styled.ul`
   margin: 0;
   list-style:none i {
     font-size: 20px;
   }
-`
+`;
 const MenuLi = styled.li`
   overflow: hidden;
   margin-bottom: 16px;
   ::after {
-    content: ' ';
+    content: " ";
     border-top: 1px solid #fdcb25;
     width: 0;
     display: inline-block;
@@ -40,12 +40,12 @@ const MenuLi = styled.li`
       transform: translateX(0px);
     }
   }
-`
+`;
 
 const Header = () => (
   <div className="menu menu-desktop">
     <HeaderWrapper>
-      <MenuList style={{ textAlign: 'right' }}>
+      <MenuList style={{ textAlign: "right" }}>
         <MenuLi>
           <Link to="/about">About</Link>
         </MenuLi>
@@ -70,6 +70,6 @@ const Header = () => (
       </MenuList>
     </HeaderWrapper>
   </div>
-)
+);
 
-export default Header
+export default Header;

@@ -1,16 +1,16 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
-import EllipsisText from 'react-ellipsis-text'
+import React from "react";
+import Link from "gatsby-link";
+import styled from "styled-components";
+import EllipsisText from "react-ellipsis-text";
 
-import { Tag } from '../globalStyles'
+import { Tag } from "../globalStyles";
 
 const PostsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-`
+`;
 const Post = styled.div`
   background: #232537;
   width: calc(50% - 16px);
@@ -20,21 +20,21 @@ const Post = styled.div`
   @media (max-width: 1024px) {
     width: 100%;
   }
-`
+`;
 const PostTitle = styled.h2`
   color: #fdcb25;
   height: 50px;
   padding: 16px;
-`
+`;
 const Thumbnail = styled.div`
   width: 100%;
   height: 200px;
   background-size: cover;
   background-position: center;
-`
+`;
 const PostFooter = styled.div`
   padding: 16px;
-`
+`;
 const Description = styled.div`
   height: 57px;
   width: 100%;
@@ -48,20 +48,20 @@ const Description = styled.div`
       color: white;
     }
   }
-`
+`;
 const TagsWrapper = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   margin: 8px 0 0 0;
-`
+`;
 const Details = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: white;
-`
+`;
 const AuthorWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -73,13 +73,13 @@ const AuthorWrapper = styled.div`
     border-radius: 8px;
     height: 32px;
   }
-`
+`;
 const Date = styled.h6`
   color: #49e1c2;
-`
+`;
 export default function Index({ data }) {
-  const { edges: posts } = data.allMarkdownRemark
-  console.log(posts)
+  const { edges: posts } = data.allMarkdownRemark;
+  console.log(posts);
   return (
     <PostsWrapper>
       {posts
@@ -94,14 +94,14 @@ export default function Index({ data }) {
                     backgroundImage: `url(${
                       post.frontmatter.thumbnail.childImageSharp.responsiveSizes
                         .src
-                    })`,
+                    })`
                   }}
                 />
               </Link>
               <PostFooter>
                 <Description>
                   <p>
-                    {' '}
+                    {" "}
                     <EllipsisText
                       text={post.frontmatter.shortDescription}
                       length={150}
@@ -130,10 +130,10 @@ export default function Index({ data }) {
                 </Details>
               </PostFooter>
             </Post>
-          )
+          );
         })}
     </PostsWrapper>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -168,4 +168,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -1,11 +1,11 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
+import React from "react";
+import Link from "gatsby-link";
+import styled from "styled-components";
 
-import { Tag } from '../globalStyles'
-import Logo from '../media/svgs/aiji-logo.svg'
-import FooterIcon from '../media/svgs/footer-icon.svg'
-import { pageQuery } from '../pages/index'
+import { Tag } from "../globalStyles";
+import Logo from "../media/svgs/aiji-logo.svg";
+import FooterIcon from "../media/svgs/footer-icon.svg";
+import { pageQuery } from "../pages/index";
 
 //* Styles */
 const SidebarWrapper = styled.div`
@@ -23,20 +23,20 @@ const SidebarWrapper = styled.div`
   p {
     font-size: 14px;
   }
-`
+`;
 const LogoImg = styled.img`
   width: 76px;
   margin-bottom: 32px;
-`
+`;
 const Hr = styled.hr`
   height: 4px;
   background: #232537;
   width: 40px;
-`
+`;
 const TagsWrapper = styled.ul`
   margin: 0;
   list-style: none;
-`
+`;
 const FooterWrapper = styled.div`
   position: relative;
   :hover p {
@@ -65,11 +65,11 @@ const FooterWrapper = styled.div`
   a {
     color: #49e1c2;
   }
-`
+`;
 const FooterImg = styled.img`
   width: 32px;
   margin: 0;
-`
+`;
 const Sidebar = () => (
   <SidebarWrapper>
     <div>
@@ -91,17 +91,19 @@ const Sidebar = () => (
     <FooterWrapper>
       <FooterImg src={FooterIcon} alt="footer-icon" />
       <p>
-        Built by{' '}
+        Built by{" "}
         <a target="_blank" href="https://twitter.com/EleanorHaproff">
           Elle
-        </a>,{' '}
+        </a>
+        ,{" "}
         <a target="_blank" href="https://twitter.com/jawache">
           Asim
-        </a>,{' '}
+        </a>
+        ,{" "}
         <a target="_blank" href="https://twitter.com/osama_jandali">
           Osama
-        </a>{' '}
-        - hosted on{' '}
+        </a>{" "}
+        - hosted on{" "}
         <a
           target="_blank"
           href="https://azure.microsoft.com/free/search/?WT.mc_id=aijsrocks-site-ashussai"
@@ -111,6 +113,6 @@ const Sidebar = () => (
       </p>
     </FooterWrapper>
   </SidebarWrapper>
-)
+);
 
-export default Sidebar
+export default Sidebar;

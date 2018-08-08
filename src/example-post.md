@@ -7,11 +7,11 @@ author: "Jane Smith"
 authorAvatar: "https://pbs.twimg.com/profile_images/1003352897676079105/QdMr0NiQ_400x400.jpg"
 shortDescription: "An example short description right here!"
 tags:
-    - TensorFlow.js
-    - PoseNet
-    - MobileNet
-    - API
-    - ml5.js
+  - TensorFlow.js
+  - PoseNet
+  - MobileNet
+  - API
+  - ml5.js
 builtBy: "Jane Smith"
 layout: "inspire"
 ---

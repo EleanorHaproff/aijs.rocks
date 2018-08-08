@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import Link from 'gatsby-link'
-import styled, { css } from 'styled-components'
-import Headroom from 'react-headroom'
+import React, { Component } from "react";
+import Link from "gatsby-link";
+import styled, { css } from "styled-components";
+import Headroom from "react-headroom";
 
-import Logo from '../media/svgs/aiji-logo.svg'
+import Logo from "../media/svgs/aiji-logo.svg";
 
 //* Styles */
 const HeaderWrapper = styled.div`
@@ -21,7 +21,7 @@ const HeaderWrapper = styled.div`
     font-size: 16px;
     cursor: pointer;
   }
-`
+`;
 const MenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -45,18 +45,18 @@ const MenuWrapper = styled.div`
       opacity: 1;
       transform: translate3d(0, 0, 0);
     `};
-`
+`;
 const CloseIcon = styled.span`
   font-size: 16px;
   text-align: right;
   cursor: pointer;
-`
+`;
 const Menu = styled.ul`
   list-style: none;
   font-size: 16px;
   font-weight: bold;
   line-height: 64px;
-`
+`;
 const SocialMedia = styled.ul`
   list-style: none;
   font-size: 22px;
@@ -65,21 +65,21 @@ const SocialMedia = styled.ul`
   li {
     margin: 0 8px;
   }
-`
+`;
 const MenuIcon = styled.span`
   font-size: 22px;
-`
+`;
 class HeaderResponsive extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
-      menuOpened: false,
-    }
-    this.toggleMenu = this.toggleMenu.bind(this)
+      menuOpened: false
+    };
+    this.toggleMenu = this.toggleMenu.bind(this);
   }
   toggleMenu = () => {
-    this.setState({ menuOpened: !this.state.menuOpened })
-  }
+    this.setState({ menuOpened: !this.state.menuOpened });
+  };
   render() {
     return (
       <div className="menu menu-mobile">
@@ -95,7 +95,7 @@ class HeaderResponsive extends Component {
           </HeaderWrapper>
         </Headroom>
         <MenuWrapper opened={this.state.menuOpened}>
-          <div style={{ textAlign: 'right' }}>
+          <div style={{ textAlign: "right" }}>
             <CloseIcon onClick={this.toggleMenu}>✖</CloseIcon>
           </div>
           <Menu>
@@ -136,17 +136,19 @@ class HeaderResponsive extends Component {
             </li>
           </SocialMedia>
           <p>
-            Built by{' '}
+            Built by{" "}
             <a target="_blank" href="https://twitter.com/EleanorHaproff">
               Elle
-            </a>,{' '}
+            </a>
+            ,{" "}
             <a target="_blank" href="https://twitter.com/jawache">
               Asim
-            </a>,{' '}
+            </a>
+            ,{" "}
             <a target="_blank" href="https://twitter.com/osama_jandali">
               Osama
-            </a>{' '}
-            - hosted on{' '}
+            </a>{" "}
+            - hosted on{" "}
             <a
               target="_blank"
               href="https://azure.microsoft.com/free/search/?WT.mc_id=aijsrocks-site-ashussai"
@@ -156,7 +158,7 @@ class HeaderResponsive extends Component {
           </p>
         </MenuWrapper>
       </div>
-    )
+    );
   }
 }
-export default HeaderResponsive
+export default HeaderResponsive;
