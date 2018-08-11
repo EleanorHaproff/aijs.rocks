@@ -1,6 +1,6 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import React from "react";
+import Helmet from "react-helmet";
+import Link from "gatsby-link";
 
 import {
   Tag,
@@ -14,31 +14,31 @@ import {
   DemoLink,
   DemoIconsWrapper,
   DemoIcon,
-  BuiltBy,
-} from '../globalStyles'
+  BuiltBy
+} from "../globalStyles";
 
 export default function Template({ data }) {
-  const post = data.markdownRemark
-  const kind = post.frontmatter.layout
+  const post = data.markdownRemark;
+  const kind = post.frontmatter.layout;
   return (
     <div>
       <Helmet
         title={`aijs.rocks - ${post.frontmatter.title}`}
         meta={[
-          { name: 'description', content: post.frontmatter.shortDescription },
-          { name: 'keywords', content: post.frontmatter.tags },
-          { property: 'og:title', content: post.frontmatter.title },
+          { name: "description", content: post.frontmatter.shortDescription },
+          { name: "keywords", content: post.frontmatter.tags },
+          { property: "og:title", content: post.frontmatter.title },
           {
-            property: 'og:description',
-            content: post.frontmatter.shortDescription,
+            property: "og:description",
+            content: post.frontmatter.shortDescription
           },
           {
-            property: 'og:image',
+            property: "og:image",
             content:
-              post.frontmatter.thumbnail.childImageSharp.responsiveSizes.src,
+              post.frontmatter.thumbnail.childImageSharp.responsiveSizes.src
           },
-          { property: 'og:url', content: post.frontmatter.path },
-          { property: 'og:type', content: 'article' },
+          { property: "og:url", content: post.frontmatter.path },
+          { property: "og:type", content: "article" }
         ]}
       />
       <div>
@@ -66,7 +66,8 @@ export default function Template({ data }) {
                 <DemoIcon className="icon-app">
                   <span className="path1" />
                   <span className="path2" />
-                </DemoIcon>Demo
+                </DemoIcon>
+                Demo
               </DemoLink>
             )}
             {post.frontmatter.code && (
@@ -76,7 +77,8 @@ export default function Template({ data }) {
                   <span className="path2" />
                   <span className="path3" />
                   <span className="path4" />
-                </DemoIcon>Code
+                </DemoIcon>
+                Code
               </DemoLink>
             )}
             {post.frontmatter.link && (
@@ -85,7 +87,8 @@ export default function Template({ data }) {
                   <span className="path1" />
                   <span className="path2" />
                   <span className="path3" />
-                </DemoIcon>Link
+                </DemoIcon>
+                Link
               </DemoLink>
             )}
           </DemoIconsWrapper>
@@ -105,7 +108,7 @@ export default function Template({ data }) {
         />
       </div>
     </div>
-  )
+  );
 }
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
@@ -133,4 +136,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

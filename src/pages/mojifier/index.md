@@ -1,15 +1,15 @@
 ---
 title: "The Mojifier"
-demo: https://github.com/jawache/mojifier
+demo: https://twitter.com/mojifier
 code: https://github.com/jawache/mojifier
-link: https://github.com/jawache/mojifier
+link: 
 date: "2018-04-01T17:12:33.962Z"
 path: "/inspire/mojifier"
 thumbnail: "./img/example-face.jpg"
 shortDescription: "TheMojifier is a Twitter bot which replaces peoples faces in images with emojis matching their emotion"
 tags:
-    - API
-    - Azure Face API
+  - API
+  - Azure Face API
 author: "Asim Hussain"
 authorAvatar: "https://pbs.twimg.com/profile_images/833970306339446784/83MO53R9_400x400.jpg"
 authorLink: "https://twitter.com/jawache"
@@ -220,13 +220,13 @@ Jimp.read(mojiPath).then(emojiImage => { ... });
 We then resize the emoji so it will fit the size of this persons’ face, like so:
 
 ```javascript
-emojiImage.resize(faceWidth, faceHeight)
+emojiImage.resize(faceWidth, faceHeight);
 ```
 
 Then we _composite_ the `emojiImage` over the `sourceImage` at the right location (the face), like so:
 
 ```javascript
-sourceImage.composite(emojiImage, faceLeft, faceTop)
+sourceImage.composite(emojiImage, faceLeft, faceTop);
 ```
 
 Then finally we get the `buffer` of the jpeg of the composited image which we can use to post to twitter, like so:
@@ -271,11 +271,11 @@ By default, if _any_ step in the flow errors out then the rest of the steps are 
 
 Http triggered Azure Functions can be configured to work with three different auth levels.
 
-* `anonymous` is the easiest to setup and means the function is essentially open to the world, _anyone_ can trigger it.
+- `anonymous` is the easiest to setup and means the function is essentially open to the world, _anyone_ can trigger it.
 
-* `function` means that only people who pass in a secret auth key can trigger it.
+- `function` means that only people who pass in a secret auth key can trigger it.
 
-* `admin` means that only admins can trigger it.
+- `admin` means that only admins can trigger it.
 
 We don’t want to make our Azure Functions open to the world, so we secure them with the `function` level auth. This would _normally_ mean that to trigger the function you’d have to pass in an auth key in the request, usually in the header.
 
@@ -363,16 +363,16 @@ I’ve set this up to post another message to another slack channel if any of th
 
 Our application, specifically the Azure Functions in our app, need some configuration to run.
 
-* `IsUserThrottled` needs to know the connection string for the Redis instance.
+- `IsUserThrottled` needs to know the connection string for the Redis instance.
 
-* `GetImageToMojify` & `ReplyWithMojifiedImage` both need to know the twitter credentials since they call the Twitter API.
+- `GetImageToMojify` & `ReplyWithMojifiedImage` both need to know the twitter credentials since they call the Twitter API.
 
 We used environment variables to hold sensitive data like that, on localhost we can use one set of environment variables and once deployed we can use another.
 
 In code, we grab the configuration from the environment using code like:
 
 ```ts
-process.env['TWITTER_CONSUMER_KEY']
+process.env["TWITTER_CONSUMER_KEY"];
 ```
 
 When developing with Azure Functions locally, we use the `local.settings.json` configuration file to define the environment variables for us.
@@ -420,6 +420,6 @@ For next steps I recommend for you to play around with the project on GitHub, fe
 
 Also try out these quickstarts on Azure for Logic Apps and Functions:
 
-* [Logic Apps Quickstart](https://docs.microsoft.com/azure/logic-apps/quickstart-create-first-logic-app-workflow?WT.mc_id=mojifier-sandbox-ashussai)
+- [Logic Apps Quickstart](https://docs.microsoft.com/azure/logic-apps/quickstart-create-first-logic-app-workflow?WT.mc_id=mojifier-sandbox-ashussai)
 
-* [Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function?WT.mc_id=mojifier-sandbox-ashussai)
+- [Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function?WT.mc_id=mojifier-sandbox-ashussai)
