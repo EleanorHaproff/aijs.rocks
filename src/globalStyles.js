@@ -41,6 +41,16 @@ export const ContentWrapper = styled.div`
   padding: 32px;
   border-radius: 40px;
   margin-bottom: 32px;
+  img {
+    display: block;
+    margin: auto;
+  }
+  .video_container {
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
 `;
 export const PostBuilder = styled.div`
   border-radius: 40px;
