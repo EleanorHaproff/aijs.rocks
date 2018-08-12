@@ -3,7 +3,7 @@ title: "TensorFlow.js Regression"
 demo: https://ck090.github.io/tensorflowregression/
 code: https://github.com/ck090/tensorflowregression
 link: https://twitter.com/nckofficial/status/1018127162728243206
-date: "2018-07-28T17:12:33.962Z"
+date: "2018-06-17"
 path: "/inspire/tensorflow-regression"
 thumbnail: "./img/tensorflowjsregression.png"
 author: "Chandra Kanth"

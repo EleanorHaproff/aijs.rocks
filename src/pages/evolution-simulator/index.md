@@ -2,8 +2,8 @@
 title: "Evolution Simulator"
 demo: https://adityathebe.github.io/evolutionSimulator/
 code: https://github.com/adityathebe/evolutionSimulator
-link: 
-date: "2018-07-28T17:12:33.962Z"
+link: https://twitter.com/hardmaru/status/1007150247829594112
+date: "2018-06-14"
 path: "/inspire/evolution-simulator"
 thumbnail: "./img/evolution-simulator.png"
 author: "Aditya Thebe"

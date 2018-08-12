@@ -3,7 +3,7 @@ title: "Tenori Off"
 demo: https://tenori-off.glitch.me/ 
 code: https://glitch.com/edit/#!/tenori-off
 link: https://twitter.com/notwaldorf/status/1012409548483620865
-date: "2018-04-01T17:12:33.962Z"
+date: "2018-06-29"
 path: "/inspire/tenori-off"
 thumbnail: "./img/screenshot.png"
 author: "Monica Dinculescu"

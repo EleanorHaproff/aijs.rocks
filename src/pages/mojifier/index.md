@@ -3,7 +3,7 @@ title: "The Mojifier"
 demo: https://twitter.com/mojifier
 code: https://github.com/jawache/mojifier
 link: 
-date: "2018-04-01T17:12:33.962Z"
+date: "2018-04-01"
 path: "/inspire/mojifier"
 thumbnail: "./img/example-face.jpg"
 shortDescription: "TheMojifier is a Twitter bot which replaces peoples faces in images with emojis matching their emotion"
