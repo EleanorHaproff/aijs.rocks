@@ -7,8 +7,8 @@ date: "2018-07-19"
 path: "/inspire/move-mirror"
 thumbnail: "./img/move-mirror.jpg"
 author: "Jane Friedhoff & Irene Alvarado"
-authorAvatar: "https://pbs.twimg.com/profile_images/688851090691891200/pYSFP5sz_400x400.jpg"
-authorLink: "https://twitter.com/ire_alva"
+authorAvatar: https://pbs.twimg.com/profile_images/688851090691891200/pYSFP5sz_400x400.jpg
+authorLink: https://twitter.com/ire_alva
 shortDescription: "An AI Experiment which matches your pose with a catalogue of 80,000 photos while you move"
 tags:
   - TensorFlow.js

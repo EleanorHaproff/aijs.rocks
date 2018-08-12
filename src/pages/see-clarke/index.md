@@ -7,7 +7,7 @@ date: "2018-07-11"
 path: "/inspire/see-clarke"
 thumbnail: "./img/see-clarke.png"
 author: "Oz Ramos"
-authorAvatar: "https://pbs.twimg.com/profile_images/1014674288656306176/Rl2YNjtL_400x400.jpg"
+authorAvatar: https://pbs.twimg.com/profile_images/1014674288656306176/Rl2YNjtL_400x400.jpg
 authorLink: https://twitter.com/labofoz?lang=en
 shortDescription: "Calculates a cursor position by tracking your head, e.g. look left the cursor moves left."
 tags:

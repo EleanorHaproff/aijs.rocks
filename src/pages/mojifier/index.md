@@ -11,8 +11,8 @@ tags:
   - API
   - Azure Face API
 author: "Asim Hussain"
-authorAvatar: "https://pbs.twimg.com/profile_images/833970306339446784/83MO53R9_400x400.jpg"
-authorLink: "https://twitter.com/jawache"
+authorAvatar: https://pbs.twimg.com/profile_images/833970306339446784/83MO53R9_400x400.jpg
+authorLink: https://twitter.com/jawache
 
 layout: "inspire"
 ---

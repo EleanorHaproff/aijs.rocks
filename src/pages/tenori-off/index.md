@@ -7,7 +7,7 @@ date: "2018-06-29"
 path: "/inspire/tenori-off"
 thumbnail: "./img/screenshot.png"
 author: "Monica Dinculescu"
-authorAvatar: "https://pbs.twimg.com/profile_images/779808817785675776/Hf9AwdFs_400x400.jpg"
+authorAvatar: https://pbs.twimg.com/profile_images/779808817785675776/Hf9AwdFs_400x400.jpg
 authorLink: https://twitter.com/notwaldorf
 shortDescription: "A music sequencer written in JavaScript which uses Machine Learning to try to match drums to a synth melody you create!"
 tags:

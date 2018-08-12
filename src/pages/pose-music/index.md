@@ -7,8 +7,8 @@ date: "2018-05-28"
 path: "/inspire/pose-music"
 thumbnail: "./img/pose-music.png"
 author: "Tero Parviainen"
-authorAvatar: "https://pbs.twimg.com/profile_images/2732329711/3445d3d345ba841d248a9cdf0a18e687_400x400.jpeg"
-authorLin   k: https://twitter.com/teropa
+authorAvatar: https://pbs.twimg.com/profile_images/2732329711/3445d3d345ba841d248a9cdf0a18e687_400x400.jpeg
+authorLink: https://twitter.com/teropa
 shortDescription: "Strike a pose to your webcam to make some music!"
 tags:
   - TensorFlow.js

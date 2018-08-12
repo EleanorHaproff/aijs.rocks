@@ -7,8 +7,8 @@ date: "2018-06-17"
 path: "/inspire/tensorflow-regression"
 thumbnail: "./img/tensorflowjsregression.png"
 author: "Chandra Kanth"
-authorAvatar: "https://pbs.twimg.com/profile_images/919643348326957056/-4jeafUw_400x400.jpg"
-authorLink: "https://twitter.com/nckofficial"
+authorAvatar: https://pbs.twimg.com/profile_images/919643348326957056/-4jeafUw_400x400.jpg
+authorLink: https://twitter.com/nckofficial
 shortDescription: "A portal where different types of regressions using TensorFlow.js can be played with"
 tags:
   - TensorFlow.js
