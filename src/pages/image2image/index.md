@@ -1,5 +1,5 @@
 ---
-title: "Pix 2 Pix"
+title: "Image2Image"
 demo: https://zaidalyafeai.github.io/pix2pix/cats.html
 code: https://github.com/zaidalyafeai/zaidalyafeai.github.io/tree/master/pix2pix
 link: https://twitter.com/zaidalyafeai/status/1028655271982374913
