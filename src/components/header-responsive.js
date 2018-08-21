@@ -85,7 +85,9 @@ class HeaderResponsive extends Component {
       <div className="menu menu-mobile">
         <Headroom>
           <HeaderWrapper>
-            <img src={Logo} alt="aiji-logo" />
+            <Link to="/">
+              <img src={Logo} alt="aiji-logo" />
+            </Link>
             <MenuIcon onClick={this.toggleMenu} className="icon-menu">
               <span className="path1" />
               <span className="path2" />
