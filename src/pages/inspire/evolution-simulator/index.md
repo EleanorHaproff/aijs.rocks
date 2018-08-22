@@ -16,7 +16,6 @@ tags:
   - p5.js
   - Matter.js
   - Reinforcement Learning
-builtBy: "Aditya Thebe"
 layout: "inspire"
 ---
 
