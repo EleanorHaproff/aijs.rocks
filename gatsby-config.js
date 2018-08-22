@@ -52,8 +52,8 @@ module.exports = {
       options: {
         trackingId: "120910098",
         // Puts tracking script in the head instead of the body
-        head: true,
-      },
-    },
+        head: true
+      }
+    }
   ]
 };
