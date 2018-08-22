@@ -11,8 +11,9 @@ authorAvatar: https://pbs.twimg.com/profile_images/870650842914983936/xzGIOGxE_b
 authorLink: https://twitter.com/holtbt
 shortDescription: Can't type for some reason? Use your voice to power a calculator.
 tags:
-  - luis.ai
   - Azure
+  - NLP
+  - luis.ai
 builtBy: "Brian Holt"
 layout: "inspire"
 ---

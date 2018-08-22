@@ -3,7 +3,7 @@ title: "Image Alt Text Generator"
 demo: https://codepen.io/sdras/pen/jawPGa
 code: https://codepen.io/sdras/pen/jawPGa
 link: https://twitter.com/sarah_edo/status/930083568411217920
-date: "2017-11-13T2:42:00.000Z"
+date: "2017-11-13T14:42:00.000Z"
 path: "/inspire/img-alt-text-generator"
 thumbnail: "./img/img-alt-text-generator.jpg"
 author: "Sarah Drasner"
@@ -11,8 +11,8 @@ authorAvatar: https://pbs.twimg.com/profile_images/982796605425303552/phhp5grt_b
 authorLink: https://twitter.com/sarah_edo
 shortDescription: Generates descriptive text of images to use in alt tags for accessibility.
 tags:
-  - Computer Vision
   - Azure
+  - Computer Vision
   - a11y
 builtBy: "Sarah Drasner"
 layout: "inspire"
