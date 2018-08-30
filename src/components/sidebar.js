@@ -73,9 +73,9 @@ const FooterImg = styled.img`
 const Sidebar = () => (
   <SidebarWrapper>
     <div>
-      <Link to="/">
+      <a href="/">
         <LogoImg src={Logo} alt="aiji-logo" />
-      </Link>
+      </a>
       {/* Will be added later..
       <h4 style={{marginBottom: 8, textAlign:'left'}}>Popular Tags</h4>
       <Hr/>
