@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f7eef6d1-cb91-4ed4-813b-015b85228d35/resourceGroups/aijs.rocks/providers/Microsoft.Web/sites/aijs-rocks",
+    "appService.deploySubpath": "public"
+}
