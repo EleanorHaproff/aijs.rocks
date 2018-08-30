@@ -4,8 +4,8 @@ Have you read our [submission guidelines](https://aijs.rocks/submit)?
 
 Checklist
 
-- [ ] One one piece of content in this Pull Request
+- [ ] One piece of content in this Pull Request
 - [ ] Project is built in JavaScript and uses AI
 - [ ] You've included a demo link
-- [ ] You've added a new folder in `/pages/` with your md file and images
+- [ ] You've added a new folder in `/pages/inspire/` with your md file and images
 - [ ] You've included relevant meta data at the top of your md file
