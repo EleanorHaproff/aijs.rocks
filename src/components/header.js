@@ -47,13 +47,13 @@ const Header = () => (
     <HeaderWrapper>
       <MenuList style={{ textAlign: "right" }}>
         <MenuLi>
-          <Link to="/about">About</Link>
+          <a href="/about">About</a>
         </MenuLi>
         <MenuLi>
-          <Link to="/">Inspire</Link>
+          <a href="/">Inspire</a>
         </MenuLi>
         <MenuLi>
-          <Link to="/submit">Submit</Link>
+          <a href="/submit">Submit</a>
         </MenuLi>
       </MenuList>
       <MenuList>

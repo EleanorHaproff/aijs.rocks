@@ -15,7 +15,7 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-catch-links`,
+    // `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,7 +46,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

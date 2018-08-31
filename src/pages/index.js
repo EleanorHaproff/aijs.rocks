@@ -87,7 +87,7 @@ export default function Index({ data }) {
         .map(({ node: post }) => {
           return (
             <Post key={post.id}>
-              <Link to={post.frontmatter.path}>
+              <a href={post.frontmatter.path}>
                 <PostTitle>{post.frontmatter.title}</PostTitle>
                 <Thumbnail
                   style={{
@@ -97,7 +97,7 @@ export default function Index({ data }) {
                     })`
                   }}
                 />
-              </Link>
+              </a>
               <PostFooter>
                 <Description>
                   <p>

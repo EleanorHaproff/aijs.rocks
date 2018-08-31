@@ -85,9 +85,9 @@ class HeaderResponsive extends Component {
       <div className="menu menu-mobile">
         <Headroom>
           <HeaderWrapper>
-            <Link to="/">
+            <a href="/">
               <img src={Logo} alt="aiji-logo" />
-            </Link>
+            </a>
             <MenuIcon onClick={this.toggleMenu} className="icon-menu">
               <span className="path1" />
               <span className="path2" />
@@ -102,19 +102,19 @@ class HeaderResponsive extends Component {
           </div>
           <Menu>
             <li>
-              <Link onClick={this.toggleMenu} to="/about">
+              <a onClick={this.toggleMenu} href="/about">
                 About
-              </Link>
+              </a>
             </li>
             <li>
-              <Link onClick={this.toggleMenu} to="/">
+              <a onClick={this.toggleMenu} href="/">
                 Inspire
-              </Link>
+              </a>
             </li>
             <li>
-              <Link onClick={this.toggleMenu} to="/submit">
+              <a onClick={this.toggleMenu} href="/submit">
                 Submit
-              </Link>
+              </a>
             </li>
           </Menu>
           <SocialMedia>
