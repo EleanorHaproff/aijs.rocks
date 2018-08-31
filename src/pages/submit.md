@@ -18,7 +18,7 @@ Please note the following submission guidelines:
 
 To create a Pull Request
 
-1.  create a folder inside `/pages/`
+1.  create a folder inside `/pages/inspire/`
 2.  Add a markdown file (see `/example-post.md`) and any required images.
 3.  Please note you will need to include meta data at the top section of the markdown file such as the title, date etc.
 4.  In the description please try to explain as little or as much about how the application is built, especially what technologies it uses.
