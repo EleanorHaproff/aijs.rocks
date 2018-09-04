@@ -1,7 +1,7 @@
 ---
 title: "Deep Drum"
 demo: https://gogul09.github.io/software/deep-drum
-code: https://github.com/Gogul09
+code: https://github.com/Gogul09/deep-drum
 date: "2018-09-02"
 path: "/inspire/deep-drum"
 thumbnail: "./img/thumbnail.png"
