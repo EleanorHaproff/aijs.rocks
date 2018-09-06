@@ -6,8 +6,8 @@ date: "2018-09-02"
 path: "/inspire/deep-drum"
 thumbnail: "./img/thumbnail.png"
 author: "Gogul Ilango"
-authorAvatar: "https://github.com/Gogul09/Gogul09.github.io/blob/master/images/gogs.jpg"
-authorLink: " https://twitter.com/gogul_ilango"
+authorAvatar: "https://pbs.twimg.com/profile_images/1005353705103749120/kItTl2sj_bigger.jpg"
+authorLink: "https://twitter.com/gogul_ilango"
 shortDescription: "An interactive drum machine created with love for Music and AI."
 tags:
   - Magenta.js
