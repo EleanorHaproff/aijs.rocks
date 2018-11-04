@@ -7,8 +7,8 @@ date: "2018-07-28"
 path: "/inspire/example-post"
 thumbnail: "./img/example.png"
 author: "Jane Smith"
-authorAvatar: "https://pbs.twimg.com/profile_images/example/example.jpg"
-authorLink: " https://twitter.com/example"
+authorAvatar: https://pbs.twimg.com/profile_images/example/example.jpg"
+authorLink: " https://twitter.com/example
 shortDescription: "An example short description right here!"
 tags:
   - TensorFlow.js
