@@ -4,10 +4,6 @@
   "version": "1.0.0",
   "author": "",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.4",
-    "@fortawesome/free-solid-svg-icons": "^5.3.1",
-    "@fortawesome/react-fontawesome": "0.1.0-11",
-    "favicons-webpack-plugin": "https://github.com/Creatiwity/favicons-webpack-plugin/tarball/master",
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-catch-links": "^1.0.24",
@@ -16,7 +12,6 @@
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-sharp": "^1.6.48",
     "gatsby-plugin-styled-components": "^2.0.11",
-    "gatsby-plugin-twitter": "^1.0.20",
     "gatsby-plugin-typography": "^1.7.19",
     "gatsby-remark-copy-linked-files": "^1.5.37",
     "gatsby-remark-images": "^1.5.67",
