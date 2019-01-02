@@ -7,15 +7,14 @@ date: "2018-12-22"
 path: "/inspire/nic-or-not"
 thumbnail: "./img/nic-or-not.png"
 author: "Gant Laborde"
-authorAvatar: https://i1.wp.com/gantlaborde.com/wp-content/uploads/2016/09/gantspeaks.jpg"
-authorLink: " https://twitter.com/gantlaborde
+authorAvatar: https://i1.wp.com/gantlaborde.com/wp-content/uploads/2016/09/gantspeaks.jpg
+authorLink: https://twitter.com/gantlaborde
 shortDescription: "Identify if someone is Nicolas Cage or not"
 tags:
   - TensorFlow.js
   - ReactNative
   - CoreML
   - face-api.js
-builtBy: "Gant Laborde"
 layout: "inspire"
 ---
 
