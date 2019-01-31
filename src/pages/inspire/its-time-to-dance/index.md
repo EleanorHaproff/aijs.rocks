@@ -15,7 +15,7 @@ tags:
 layout: "inspire"
 ---
 
-![Animation](./img/cart-pole.gif)
+![Animation](./img/dancing.gif)
 
 It’s Time to Dance is a jolly Xmas experiment brought to you by two [Jam3](https://twitter.com/jam3) creatives;
 [Amelie Rosser](https://twitter.com/ixviii_io) and [Victoire Douy](https://twitter.com/victoiredouy).
