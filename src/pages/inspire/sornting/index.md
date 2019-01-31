@@ -3,7 +3,7 @@ title: "Sornting"
 demo: https://vibertthio.com/sornting/
 code: https://github.com/vibertthio/sornting
 link: https://vibertthio.com/sornting/
-date: "2010-01-08"
+date: "2019-01-08"
 path: "/inspire/sornting"
 thumbnail: "./img/sc-03.png"
 author: "Vibert Thio"
