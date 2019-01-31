@@ -6,16 +6,13 @@ date: "2018-09-02"
 path: "/inspire/deep-drum"
 thumbnail: "./img/thumbnail.png"
 author: "Gogul Ilango"
-authorAvatar: "https://pbs.twimg.com/profile_images/1005353705103749120/kItTl2sj_bigger.jpg"
-authorLink: "https://twitter.com/gogul_ilango"
+authorAvatar: https://pbs.twimg.com/profile_images/1077129445947949056/2pEOtyqy_400x400.jpg
+authorLink: https://twitter.com/gogul_ilango
 shortDescription: "An interactive drum machine created with love for Music and AI."
 tags:
   - Magenta.js
   - Tone.js
   - Magenta DrumRNN
-  - JavaScript
-  - CSS3
-  - HTML5
 builtBy: "Gogul Ilango"
 layout: "inspire"
 ---

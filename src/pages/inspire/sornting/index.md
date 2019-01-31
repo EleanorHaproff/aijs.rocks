@@ -11,8 +11,9 @@ authorAvatar: https://avatars3.githubusercontent.com/u/19225067
 authorLink: http://vibertthio.com/
 shortDescription: "Listen to music and sort in the right order"
 tags:
-  - tone.js
+  - Tone.js
   - MusicVAE.js
+  - Magenta.js
 layout: "inspire"
 ---
 

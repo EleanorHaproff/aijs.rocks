@@ -12,7 +12,7 @@ tags:
   - Face API
   - Emotion
 author: "Asim Hussain"
-authorAvatar: https://pbs.twimg.com/profile_images/833970306339446784/83MO53R9_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1062107047083282432/IACgLZqk_400x400.jpg
 authorLink: https://twitter.com/jawache
 
 layout: "inspire"
