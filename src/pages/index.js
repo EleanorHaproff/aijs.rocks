@@ -79,7 +79,6 @@ const Date = styled.h6`
 `;
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
-  console.log(posts);
   return (
     <PostsWrapper>
       {posts

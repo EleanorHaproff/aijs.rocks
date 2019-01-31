@@ -5,7 +5,7 @@ code: https://github.com/vibertthio/sornting
 link: https://vibertthio.com/sornting/
 date: "2010-01-08"
 path: "/inspire/sornting"
-thumbnail: "./img/sornting.gif"
+thumbnail: "./img/sc-03.png"
 author: "Vibert Thio"
 authorAvatar: https://avatars3.githubusercontent.com/u/19225067
 authorLink: http://vibertthio.com/
@@ -17,7 +17,7 @@ tags:
 layout: "inspire"
 ---
 
-![Animation](./img/sorting.gif)
+![Animation](./img/sornting.gif)
 
 This is a game based on a musical machine learning algorithm which can interpolate different melodies.
 The player has to listen to the music to find out the right order, or "sort" the song.
