@@ -3,7 +3,7 @@ title: "Chester the AI Radiology Assistant"
 demo: https://mlmed.org/tools/xray/
 code: https://github.com/mlmed/dl-web-xray
 link: https://arxiv.org/abs/1901.11210
-date: "2018-02-10"
+date: "2019-02-10"
 path: "/inspire/chest-xray-diagnosis"
 thumbnail: "./img/x-ray.jpg"
 author: "Joseph Paul Cohen"
