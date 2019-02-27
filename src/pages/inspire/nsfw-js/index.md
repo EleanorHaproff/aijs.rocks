@@ -12,7 +12,6 @@ authorLink: https://twitter.com/gantlaborde
 shortDescription: "Client-side indecent content checking for the soul"
 tags:
 - TensorFlow.js
-- Computer Vision
 - Image Recognition
 layout: "inspire"
 ---
