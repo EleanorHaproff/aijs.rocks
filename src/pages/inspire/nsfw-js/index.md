@@ -1,19 +1,19 @@
-    ---
+---
 title: "Avoid Nightmares - NSFW JS"
 demo: https://nsfwjs.com/
 code: https://github.com/infinitered/nsfwjs
 link: https://shift.infinite.red/avoid-nightmares-nsfw-js-ab7b176978b1
 date: "2019-02-19"
 path: "/inspire/nsfw-js"
-thumbnail: "./img/nsfw.jpeg"
+thumbnail: "./img/nsfw.jpg"
 author: "Gant Laborde"
-authorAvatar: https://pbs.twimg.com/profile_images/664163024983330816/AX5wMLcm_400x400.jpg
-authorLink: https://twitter.com/josephpaulcohen
+authorAvatar: https://i1.wp.com/gantlaborde.com/wp-content/uploads/2016/09/gantspeaks.jpg
+authorLink: https://twitter.com/gantlaborde
 shortDescription: "Client-side indecent content checking for the soul"
 tags:
-  - TensorFlow.js
-  - Computer Vision
-  - Image Recognition
+- TensorFlow.js
+- Computer Vision
+- Image Recognition
 layout: "inspire"
 ---
 
