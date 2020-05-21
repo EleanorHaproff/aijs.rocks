@@ -6,7 +6,7 @@ date: "2018-08-06"
 path: "/inspire/neural-beatbox"
 thumbnail: "./img/neural-beatbox.png"
 author: "Nao Tokui"
-authorAvatar: https://pbs.twimg.com/profile_images/865077490154315780/uCkUvL2R_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1159131369588572161/DTy-gkPg_400x400.jpg
 authorLink: https://twitter.com/naotokui_en
 shortDescription: "RNN-based Rhythm Generation and Audio Classification"
 tags:

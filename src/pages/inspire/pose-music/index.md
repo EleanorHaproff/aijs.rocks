@@ -7,7 +7,7 @@ date: "2018-05-28"
 path: "/inspire/pose-music"
 thumbnail: "./img/pose-music.png"
 author: "Tero Parviainen"
-authorAvatar: https://pbs.twimg.com/profile_images/2732329711/3445d3d345ba841d248a9cdf0a18e687_400x400.jpeg
+authorAvatar: https://pbs.twimg.com/profile_images/1159131369588572161/DTy-gkPg_400x400.jpg
 authorLink: https://twitter.com/teropa
 shortDescription: "Strike a pose to your webcam to make some music!"
 tags:

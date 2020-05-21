@@ -7,7 +7,7 @@ date: "2018-11-01"
 path: "/inspire/llama-vision"
 thumbnail: "./img/llama-vision.jpg"
 author: "Peter O'Shaughnessy"
-authorAvatar: https://pbs.twimg.com/profile_images/925642833930932224/4z64AAtq_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1198274806757625857/k2QhECLD_400x400.jpg
 authorLink: https://twitter.com/poshaughnessy
 shortDescription: "A website that detects llamas through your camera"
 tags:

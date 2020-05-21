@@ -7,7 +7,7 @@ date: "2017-11-13T14:42:00.000Z"
 path: "/inspire/img-alt-text-generator"
 thumbnail: "./img/img-alt-text-generator.jpg"
 author: "Sarah Drasner"
-authorAvatar: https://pbs.twimg.com/profile_images/1039352369232789504/M7tgq-c8_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1225613270205091840/NyoNYuhC_400x400.jpg
 authorLink: https://twitter.com/sarah_edo
 shortDescription: Generates descriptive text of images to use in alt tags for accessibility.
 tags:

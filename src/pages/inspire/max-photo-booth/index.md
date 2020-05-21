@@ -7,7 +7,7 @@ date: "2018-12-15"
 path: "/inspire/max-photo-booth"
 thumbnail: "./img/max-photo-booth.jpg"
 author: "Nick Kasten"
-authorAvatar: https://pbs.twimg.com/profile_images/816108611285848065/53PoDI6r_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1143365936306634753/BOapwImq_400x400.jpg
 authorLink: https://twitter.com/KastenCode512
 shortDescription: "Make the perfect holiday selfie"
 tags:

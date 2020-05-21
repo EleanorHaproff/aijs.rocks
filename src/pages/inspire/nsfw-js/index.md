@@ -7,12 +7,12 @@ date: "2019-02-19"
 path: "/inspire/nsfw-js"
 thumbnail: "./img/nsfw.jpg"
 author: "Gant Laborde"
-authorAvatar: https://i1.wp.com/gantlaborde.com/wp-content/uploads/2016/09/gantspeaks.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1243558714105348106/aQbiDdVd_400x400.jpg
 authorLink: https://twitter.com/gantlaborde
 shortDescription: "Client-side indecent content checking for the soul"
 tags:
-- TensorFlow.js
-- Image Recognition
+  - TensorFlow.js
+  - Image Recognition
 layout: "inspire"
 ---
 

@@ -7,7 +7,7 @@ date: "2019-02-15"
 path: "/inspire/bodypix"
 thumbnail: "./img/bodypix.png"
 author: "Dan Oved & Tyler Zhu"
-authorAvatar: https://pbs.twimg.com/profile_images/977982376780451840/FpOI7OVu_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1170898269570043911/3I8Xo1Ur_400x400.jpg
 authorLink: https://twitter.com/oveddan
 shortDescription: "Person Segmentation in the Browser with TensorFlow.js"
 tags:

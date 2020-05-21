@@ -7,10 +7,10 @@ date: "2018-08-06"
 path: "/inspire/sketch-rnn"
 thumbnail: "./img/sketch-rnn.png"
 author: "David Ha"
-authorAvatar: https://pbs.twimg.com/profile_images/940279822072233984/ijlnR9K9_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1244133811278852097/rxL5LqpS_400x400.png
 authorLink: https://twitter.com/hardmaru
 shortDescription: "A generative recurrent neural network capable of producing
-                   sketches of common objects"
+  sketches of common objects"
 tags:
   - TensorFlow.js
   - Magenta.js

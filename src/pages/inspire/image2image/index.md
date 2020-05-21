@@ -7,7 +7,7 @@ date: "2018-08-12"
 path: "/inspire/image2image"
 thumbnail: "./img/image2image.png"
 author: "Zaid Alyafeai"
-authorAvatar: https://pbs.twimg.com/profile_images/979019950227623936/sUUTg4IB_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1121201128086044673/EBdjja3c_400x400.jpg
 authorLink: https://twitter.com/zaidalyafeai
 shortDescription: "Make auto-generated images out of simple line drawings"
 tags:
@@ -23,13 +23,12 @@ layout: "inspire"
 </figure>
 
 A simple implementation of the [Pix2Pix by Isola et al.](https://phillipi.github.io/pix2pix/) paper,
- adapted to run in the browser using TensorFlow.js.
- It uses machine learning, namely, conditional adversarial networks,
- to create the pictures.
- The code runs in real time after you draw some edges, and you can switch
- between generating images of cats, facades or shoes.
+adapted to run in the browser using TensorFlow.js.
+It uses machine learning, namely, conditional adversarial networks,
+to create the pictures.
+The code runs in real time after you draw some edges, and you can switch
+between generating images of cats, facades or shoes.
 
- Run the model via a laptop as mobile devices cannot handle the current models.
+Run the model via a laptop as mobile devices cannot handle the current models.
 
- Check out the [demo](https://zaidalyafeai.github.io/pix2pix/cats.html), and use the mouse to draw in the left hand box, and see the results on the right.
-
+Check out the [demo](https://zaidalyafeai.github.io/pix2pix/cats.html), and use the mouse to draw in the left hand box, and see the results on the right.

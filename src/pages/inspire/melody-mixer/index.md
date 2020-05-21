@@ -7,7 +7,7 @@ date: "2018-03-15"
 path: "/inspire/melody-mixer"
 thumbnail: "./img/melody-mixer.png"
 author: "Torin Blankensmith"
-authorAvatar: https://pbs.twimg.com/profile_images/1908115448/291778_10150462032254692_748774691_11140511_999313915_n_400x400.jpeg
+authorAvatar: https://pbs.twimg.com/profile_images/1201773106412564480/CHNhf7j5_400x400.jpg
 authorLink: https://twitter.com/tBlankensmith
 shortDescription: "Using TensorFlow.js to Mix Melodies in the Browser"
 tags:

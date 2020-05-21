@@ -2,17 +2,17 @@
 title: "The Mojifier"
 demo: https://twitter.com/mojifier
 code: https://github.com/jawache/mojifier
-link: 
+link:
 date: "2018-04-01"
 path: "/inspire/mojifier"
 thumbnail: "./img/team.jpg"
 shortDescription: "TheMojifier is a Twitter bot which replaces peoples faces in images with emojis matching their emotion"
 tags:
-  - Azure 
+  - Azure
   - Face API
   - Emotion
 author: "Asim Hussain"
-authorAvatar: https://pbs.twimg.com/profile_images/1062107047083282432/IACgLZqk_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1164548061147926528/mJ_uI9Fo_400x400.jpg
 authorLink: https://twitter.com/jawache
 
 layout: "inspire"
@@ -272,11 +272,11 @@ By default, if _any_ step in the flow errors out then the rest of the steps are 
 
 Http triggered Azure Functions can be configured to work with three different auth levels.
 
-* `anonymous` is the easiest to setup and means the function is essentially open to the world, _anyone_ can trigger it.
+- `anonymous` is the easiest to setup and means the function is essentially open to the world, _anyone_ can trigger it.
 
-* `function` means that only people who pass in a secret auth key can trigger it.
+- `function` means that only people who pass in a secret auth key can trigger it.
 
-* `admin` means that only admins can trigger it.
+- `admin` means that only admins can trigger it.
 
 We don’t want to make our Azure Functions open to the world, so we secure them with the `function` level auth. This would _normally_ mean that to trigger the function you’d have to pass in an auth key in the request, usually in the header.
 
@@ -364,9 +364,9 @@ I’ve set this up to post another message to another slack channel if any of th
 
 Our application, specifically the Azure Functions in our app, need some configuration to run.
 
-* `IsUserThrottled` needs to know the connection string for the Redis instance.
+- `IsUserThrottled` needs to know the connection string for the Redis instance.
 
-* `GetImageToMojify` & `ReplyWithMojifiedImage` both need to know the twitter credentials since they call the Twitter API.
+- `GetImageToMojify` & `ReplyWithMojifiedImage` both need to know the twitter credentials since they call the Twitter API.
 
 We used environment variables to hold sensitive data like that, on localhost we can use one set of environment variables and once deployed we can use another.
 
@@ -421,8 +421,8 @@ For next steps I recommend for you to play around with the project on GitHub, fe
 
 Also try out these quickstarts on Azure for Logic Apps and Functions:
 
-* [Logic Apps Quickstart](https://docs.microsoft.com/azure/logic-apps/quickstart-create-first-logic-app-workflow?WT.mc_id=mojifier-sandbox-ashussai)
+- [Logic Apps Quickstart](https://docs.microsoft.com/azure/logic-apps/quickstart-create-first-logic-app-workflow?WT.mc_id=mojifier-sandbox-ashussai)
 
-* [Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function?WT.mc_id=mojifier-sandbox-ashussai)
+- [Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function?WT.mc_id=mojifier-sandbox-ashussai)
 
 This tutorial first appear on the [code craft](https://codecraft.tv/blog/2018/04/09/mojifier/) blog.

@@ -6,7 +6,6 @@ date: "2018-08-30"
 path: "/inspire/emoji-caption"
 thumbnail: "./img/example.png"
 author: "Alex Saunders"
-authorAvatar: "https://pbs.twimg.com/profile_images/983080759580819457/91t8dUD0_400x400.jpg"
 authorLink: " https://twitter.com/AlexJRsaunders"
 shortDescription: "Automatically generated emoji captions for your images"
 tags:

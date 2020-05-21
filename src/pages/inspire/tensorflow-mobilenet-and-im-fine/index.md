@@ -7,7 +7,7 @@ date: "2018-05-28T16:53:00.000Z"
 path: "/inspire/tensorflow-mobilenet-and-im-fine"
 thumbnail: "./img/tensorflow-mobilenet-and-im-fine.png"
 author: "Oliver Turner"
-authorAvatar: https://pbs.twimg.com/profile_images/1084257756855656450/NTwY5MEl_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1254145024322875392/3xfGhM9f_400x400.jpg
 authorLink: https://twitter.com/oliverturner
 shortDescription: Search for images using unsplash and then use the mobilenet tensorflow.js model to try to figure out exactly what's in the image?
 tags:

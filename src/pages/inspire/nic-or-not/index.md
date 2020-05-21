@@ -7,7 +7,7 @@ date: "2018-12-22"
 path: "/inspire/nic-or-not"
 thumbnail: "./img/nic-or-not.png"
 author: "Gant Laborde"
-authorAvatar: https://i1.wp.com/gantlaborde.com/wp-content/uploads/2016/09/gantspeaks.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1243558714105348106/aQbiDdVd_400x400.jpg
 authorLink: https://twitter.com/gantlaborde
 shortDescription: "Identify if someone is Nicolas Cage or not"
 tags:

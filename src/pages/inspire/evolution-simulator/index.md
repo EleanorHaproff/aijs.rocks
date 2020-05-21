@@ -7,7 +7,7 @@ date: "2018-06-14"
 path: "/inspire/evolution-simulator"
 thumbnail: "./img/evolution-simulator.png"
 author: "Aditya Thebe"
-authorAvatar: https://pbs.twimg.com/profile_images/955084692105060352/EdQsyRYc_400x400.jpg
+authorAvatar: https://pbs.twimg.com/profile_images/1170184875921395713/11XNLRiN_400x400.jpg
 authorLink: https://twitter.com/adityathebe
 shortDescription: "Evolve a set of creatures that can walk right across the screen"
 tags:
