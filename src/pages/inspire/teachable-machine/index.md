@@ -5,7 +5,7 @@ code: https://github.com/googlecreativelab/teachablemachine-community/
 link: https://teachablemachine.withgoogle.com/
 date: "2019-11-07"
 path: "/inspire/teachable-machine"
-thumbnail: "./img/teachable-machine"
+thumbnail: "./img/teachable-machine.png"
 author: "Alexander Chen"
 authorAvatar: https://pbs.twimg.com/profile_images/1155206337/3646787986_a8a07ce5d2_o_600px_400x400.jpg
 authorLink: https://twitter.com/alexanderchen
