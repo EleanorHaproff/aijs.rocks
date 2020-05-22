@@ -1,6 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `aijs.rocks`
+    title: `aijs.rocks`,
+    twitterUsername: "@aijavascript",
+    image: "/images/banner.png",
+    url: "https://aijs.rocks",
+    description:
+      "A curated collection of inspirational AI-powered JavaScript apps",
   },
   plugins: [
     // {
@@ -11,8 +16,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: true
-      }
+        displayName: true,
+      },
     },
     `gatsby-transformer-sharp`,
     // `gatsby-plugin-catch-links`,
@@ -20,8 +25,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: "pages"
-      }
+        name: "pages",
+      },
     },
     `gatsby-plugin-sharp`,
     {
@@ -33,17 +38,17 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
-              wrapperStyle: "text-align: center;"
-            }
+              wrapperStyle: "text-align: center;",
+            },
           },
           {
             resolve: "gatsby-remark-copy-linked-files",
             options: {
-              destinationDir: "static"
-            }
-          }
-        ]
-      }
+              destinationDir: "static",
+            },
+          },
+        ],
+      },
     },
     `gatsby-plugin-react-helmet`,
     {
@@ -51,8 +56,8 @@ module.exports = {
       options: {
         trackingId: "UA-120910098-1",
         // Puts tracking script in the head instead of the body
-        head: true
-      }
-    }
-  ]
+        head: true,
+      },
+    },
+  ],
 };
