@@ -1,5 +1,5 @@
 ---
-title: "Teachabe Machine"
+title: "Teachable Machine"
 demo: https://teachablemachine.withgoogle.com/v1/
 code: https://github.com/googlecreativelab/teachablemachine-community/
 link: https://teachablemachine.withgoogle.com/
@@ -15,7 +15,7 @@ tags:
 layout: "inspire"
 ---
 
-![Animation](https://video.twimg.com/tweet_video/EIyz1FMXYAASNop.mp4)
+![Animation](./img/teachable-machine.gif)
 
 Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone.
 
