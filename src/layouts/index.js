@@ -112,8 +112,16 @@ class Layout extends Component {
         content: title,
       },
       {
+        name: "twitter:description",
+        content: description,
+      },
+      {
         name: "twitter:image",
         content: image,
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
       },
     ];
     return (
