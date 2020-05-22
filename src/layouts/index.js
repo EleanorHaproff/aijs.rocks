@@ -69,15 +69,16 @@ class Layout extends Component {
   render() {
     const { width } = this.state;
     const { description, url, title } = this.props.data.site.siteMetadata;
+    const image = `${url}/${Banner}`;
 
     const facebookMeta = [
       {
         name: "og:title",
-        content: `${title}`,
+        content: title,
       },
       {
         name: "og:site_name",
-        content: `${title}`,
+        content: title,
       },
       {
         name: "og:type",
@@ -85,22 +86,22 @@ class Layout extends Component {
       },
       {
         name: "og:url",
-        content: `${url}`,
+        content: url,
       },
       {
         name: "og:description",
-        content: `${description}`,
+        content: description,
       },
       {
         name: "og:image",
-        content: `${Banner}`,
+        content: image,
       },
     ];
 
     const twitterMeta = [
       {
         name: "twitter:site",
-        content: `${url}`,
+        content: url,
       },
       {
         name: "twitter:creator",
@@ -108,11 +109,11 @@ class Layout extends Component {
       },
       {
         name: "twitter:title",
-        content: `${title}`,
+        content: title,
       },
       {
         name: "twitter:image",
-        content: `${Banner}`,
+        content: image,
       },
     ];
     return (
