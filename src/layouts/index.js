@@ -7,12 +7,12 @@ import styled from "styled-components";
 import Header from "../components/header";
 import HeaderResponsive from "../components/header-responsive";
 import Sidebar from "../components/sidebar";
-import Logo from "../media/aijs-logo.png";
 import Favicon from "../media/favicons/favicon.ico";
 
 import "./index.scss";
 import "../media/icons/style.css";
 import BgPattern from "../media/bg_pattern.png";
+import Banner from "../media/banner.png";
 
 // Syntax Highlighting
 require("prismjs/themes/prism-tomorrow.css");
@@ -54,7 +54,7 @@ class Layout extends Component {
   constructor() {
     super();
     this.state = {
-      width: typeof window !== `undefined` ? window.innerWidth : 1000
+      width: typeof window !== `undefined` ? window.innerWidth : 1000,
     };
     this.updateDimensions = this.updateDimensions.bind(this);
   }
@@ -63,48 +63,84 @@ class Layout extends Component {
   }
   updateDimensions() {
     this.setState({
-      width: window.innerWidth
+      width: window.innerWidth,
     });
   }
   render() {
     const { width } = this.state;
+    const { description, url, title } = this.props.data.site.siteMetadata;
+
+    const facebookMeta = [
+      {
+        name: "og:title",
+        content: `${title}`,
+      },
+      {
+        name: "og:site_name",
+        content: `${title}`,
+      },
+      {
+        name: "og:type",
+        content: "website",
+      },
+      {
+        name: "og:url",
+        content: `${url}`,
+      },
+      {
+        name: "og:description",
+        content: `${description}`,
+      },
+      {
+        name: "og:image",
+        content: `${Banner}`,
+      },
+    ];
+
+    const twitterMeta = [
+      {
+        name: "twitter:site",
+        content: `${url}`,
+      },
+      {
+        name: "twitter:creator",
+        content: "Elle Haproff",
+      },
+      {
+        name: "twitter:title",
+        content: `${title}`,
+      },
+      {
+        name: "twitter:image",
+        content: `${Banner}`,
+      },
+    ];
     return (
       <AppWrapper>
         {width > 768 ? <Sidebar /> : <HeaderResponsive />}
         <Helmet
-          title={this.props.data.site.siteMetadata.title}
+          title={title}
           meta={[
             {
               rel: "stylesheet",
-              href: "https://fonts.googleapis.com/css?family=Space+Mono:400,700"
+              href:
+                "https://fonts.googleapis.com/css?family=Space+Mono:400,700",
             },
             {
               name: "description",
-              content:
-                "A curated collection of inspirational AI-powered JavaScript apps. Find examples of artificial intelligence and machine learning with Javascript"
+              content: `${description}`,
             },
             {
               name: "keywords",
               content:
-                "ai, machine learning, javascript, artificial intelligence, neural networks, js, tensorflow.js, posenet, mobilenet, "
+                "ai, machine learning, javascript, artificial intelligence, neural networks, js, tensorflow.js, posenet, mobilenet, ",
             },
-            { name: "twitter:card", content: "summary" },
-            { name: "twitter:site", content: "@aijavascript" },
-            {
-              property: "og:title",
-              content: this.props.data.site.siteMetadata.title
-            },
-            {
-              property: "og:description",
-              content:
-                "A curated collection of inspirational AI-powered JavaScript apps. Find examples of artificial intelligence and machine learning with Javascript"
-            },
-            { property: "og:image", content: `${Logo}` },
-            { property: "og:url", content: "https://aijs.rocks/" },
-            { property: "theme-color", content: "#fdcb25" }
+            { property: "theme-color", content: "#fdcb25" },
+            ...twitterMeta,
+            ...facebookMeta,
           ]}
           link={[
-            { rel: "shortcut icon", type: "image/png", href: `${Favicon}` }
+            { rel: "shortcut icon", type: "image/png", href: `${Favicon}` },
           ]}
         />
         <ContentWrapper>{this.props.children()}</ContentWrapper>
@@ -115,7 +151,7 @@ class Layout extends Component {
 }
 
 Layout.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.func,
 };
 
 export default Layout;

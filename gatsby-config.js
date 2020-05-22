@@ -5,7 +5,7 @@ module.exports = {
     image: "/images/banner.png",
     url: "https://aijs.rocks",
     description:
-      "A curated collection of inspirational AI-powered JavaScript apps",
+      "A curated collection of inspirational AI-powered JavaScript apps. Find examples of artificial intelligence and machine learning with Javascript",
   },
   plugins: [
     // {
