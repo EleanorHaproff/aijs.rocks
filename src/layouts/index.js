@@ -161,6 +161,10 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        twitterUsername
+        image
+        url
+        description
       }
     }
   }
