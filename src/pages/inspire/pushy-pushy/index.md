@@ -1,4 +1,3 @@
-
 ---
 title: "Pushy Pushy"
 demo: https://PushyPushy.com
@@ -6,7 +5,7 @@ code: https://github.com/Dotonomic/pushy-pushy
 link: https://WebAIApps.com
 date: "2023-11-29"
 path: "/inspire/pushy-pushy"
-thumbnail: "./img/pushy-pushy_screen-capture.png"
+thumbnail: "./img/pushy-pushy_screen-capture.PNG"
 author: "Dotonomic (Pedro Miguel Santos)"
 authorAvatar: ./img/dotonomic_logo.png"
 authorLink: https://www.linkedin.com/in/dotonomic
@@ -26,6 +25,8 @@ tags:
 builtBy: "Dotonomic (Pedro Miguel Santos)"
 layout: "inspire"
 ---
+
+![wack-a-mole](./img/wack-a-mole.png)
 
 Pushy Pushy is part of [Web AI Apps](https://WebAIApps.com)
 
