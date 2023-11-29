@@ -1,14 +1,14 @@
 ---
 title: "Pushy Pushy"
-demo: http://PushyPushy.com
-code: http://github.com/Dotonomic/pushy-pushy
+demo: www.PushyPushy.com
+code: www.github.com/Dotonomic/pushy-pushy
 link: www.WebAIApps.com
 date: "2023-11-29"
 path: "/inspire/pushy-pushy"
 thumbnail: "./img/pushy-pushy_screen-capture.PNG"
 author: "Dotonomic (Pedro Miguel Santos)"
 authorAvatar: ./img/dotonomic_logo.png
-authorLink: Linkedin.com/in/Dotonomic
+authorLink: www.Linkedin.com/in/Dotonomic
 shortDescription: "JavaScript Games generator"
 tags:
   - PHP
